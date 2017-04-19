@@ -30,3 +30,21 @@
   margin:1%;
   float:left;
 }
+
+.blox_datetime {
+   position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#time {
+  text-align: center;
+  color: aliceblue;
+  font-size: 7vw;
+}
+
+#date {
+  text-align: center;
+  font-size: 2vw;
+  color: darkcyan;
+}

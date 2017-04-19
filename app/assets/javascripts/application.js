@@ -15,3 +15,10 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+var myVar = setInterval(myTimer, 500);
+
+function myTimer() {
+    var d = new Date();
+    document.getElementById("time").innerHTML = d.toLocaleTimeString();
+}
