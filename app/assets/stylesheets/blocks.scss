@@ -1,0 +1,32 @@
+// Place all the styles related to the blocks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.dashblox {
+  overflow:auto;
+  width: 100vw;
+  height:100vw;
+  background-color:#0b2856;
+}
+
+.six_x_six {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #1f2d42;
+  width: 48vw;
+  height:30vw;
+  background:#555;
+  margin:1%;
+  float:left;
+}
+
+.twelve_x_two {
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #1f2d42;
+  width: 98vw;
+  height:10vw;
+  background:#555;
+  margin:1%;
+  float:left;
+}
