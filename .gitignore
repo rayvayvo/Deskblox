@@ -5,9 +5,9 @@
 #   git config --global core.excludesfile '~/.gitignore_global'
 
 # Ignore all logfiles and tempfiles.
-/log/*
+log/*
 !/log/.keep
-/tmp
+tmp/
 
 # Ignore carrier wave uploads for development
 /public/uploads
@@ -57,3 +57,4 @@ bower.json
 .byebug_history
 
 .DS_Store
+
