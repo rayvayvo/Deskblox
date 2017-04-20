@@ -1,0 +1,27 @@
+<script>
+<%     response =
+    HTTP.get('http://dataservice.accuweather.com/forecasts/v1/daily/1day/55488?apikey=%20%09tVhULZkgATwDv7y6vlJaYjtbqy8FVepU%20')
+    r = response.parse
+
+%>
+</script>
+
+<h1>weather!</h1>
+
+<div><h2>The forecast today calls for:
+  <strong>
+    <%= r['Headline']['Category'] %>
+  </strong></h2></div>
+<div><h2>with a high of:
+  <strong>
+    <%= r['DailyForecasts'].first['Temperature']['Maximum']['Value'] %>
+  </strong></h2></div>
+<div><h2>and a low of:
+  <strong>
+  <%= r['DailyForecasts'].first['Temperature']['Minimum']['Value'] %>
+  </strong></h2></div>
+
+
+<%#div>Forecast for today: <%= response.Headline.Category %></div>
+<%#div>With a low of: <%= response[:DailyForecasts]%></div>
+
