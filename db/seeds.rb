@@ -11,3 +11,15 @@ User.create(
   password: "blocky",
   theme_id: 1
 )
+
+Widget.create(
+  body: "apikey=%20%09tVhULZkgATwDv7y6vlJaYjtbqy8FVepU%20",
+  source: 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/55488?'
+)
+
+# create_table "widgets", force: :cascade do |t|
+#     t.string   "body"
+#     t.string   "source"
+#     t.datetime "created_at", null: false
+#     t.datetime "updated_at", null: false
+#   end

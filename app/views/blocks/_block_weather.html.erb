@@ -1,0 +1,22 @@
+<%     weather =
+    HTTP.get("#{Widget.find(1).source}#{Widget.find(1).body}")
+    w = weather.parse
+
+%>
+
+<div><h2>The forecast today calls for:
+  <strong>
+    <%= w['Headline']['Category'] %>
+  </strong></h2></div>
+<div><h2>with a high of:
+  <strong>
+    <%= ((w['DailyForecasts'].first['Temperature']['Maximum']['Value'] - 32) * 0.5556).round %>
+    &#8451
+  </strong></h2></div>
+<div><h2>and a low of:
+  <strong>
+  <%= ((w['DailyForecasts'].first['Temperature']['Minimum']['Value'] -32)* 0.5556).round %>
+    &#8451
+  </strong></h2></div>
+
+  </div>

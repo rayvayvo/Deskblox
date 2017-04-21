@@ -1,8 +1,3 @@
-<%     weather =
-    HTTP.get('http://dataservice.accuweather.com/forecasts/v1/daily/1day/55488?apikey=%20%09tVhULZkgATwDv7y6vlJaYjtbqy8FVepU%20')
-    w = weather.parse
-
-%>
 
 <div class='dashblox'>
   <div class="six_x_six">
@@ -15,20 +10,7 @@
     </div>
   </div>
   <div class="six_x_six">
-<div><h2>The forecast today calls for:
-  <strong>
-    <%= w['Headline']['Category'] %>
-  </strong></h2></div>
-<div><h2>with a high of:
-  <strong>
-    <%= w['DailyForecasts'].first['Temperature']['Maximum']['Value'] %>
-  </strong></h2></div>
-<div><h2>and a low of:
-  <strong>
-  <%= w['DailyForecasts'].first['Temperature']['Minimum']['Value'] %>
-  </strong></h2></div>
-
-  </div>
+  <%= render "block_weather" %>
   <div class="twelve_x_two">News: World</div>
   <div class="twelve_x_two">News: Local</div>
 </div>

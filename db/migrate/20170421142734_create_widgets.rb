@@ -1,8 +1,9 @@
 class CreateWidgets < ActiveRecord::Migration[5.0]
   def change
+    drop_table :widgets
     create_table :widgets do |t|
-      t.string :data_id
-      t.string :user_id
+      t.string :body
+      t.string :source
 
       t.timestamps
     end
