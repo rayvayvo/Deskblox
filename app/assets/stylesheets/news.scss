@@ -1,0 +1,31 @@
+// Place all the styles related to the torStarNews controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 55s linear infinite;
+}
+
+.marquee_fast {
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+    0%   { text-indent: 0em }
+    100% { text-indent: -105em }
+}
+
+.news {
+  font-size: 5vw;
+  color: aliceblue;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 1vw;
+}

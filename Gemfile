@@ -23,6 +23,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'geocoder'
 gem 'bootstrap-sass'
 gem "http"
+gem 'feedjira'
 gem 'pry'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

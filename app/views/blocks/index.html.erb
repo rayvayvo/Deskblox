@@ -5,15 +5,7 @@
 %>
 
 <div class='dashblox'>
-  <div class="six_x_six">
-    <% time_now = DateTime.current() %>
-    <div class='blox_datetime'>
-      <div id="time">_</div>
-      <div id="date">
-        <%= time_now.strftime("%A, %B %e %Y") %>
-      </div>
-    </div>
-  </div>
+  <div class="six_x_six"><%= render "block_datetime" %></div>
   <div class="six_x_six">
 <div><h2>The forecast today calls for:
   <strong>
@@ -29,8 +21,8 @@
   </strong></h2></div>
 
   </div>
-  <div class="twelve_x_two">News: World</div>
-  <div class="twelve_x_two">News: Local</div>
+  <div class="twelve_x_two"><%= render "news/world_news" %></div>
+  <div class="twelve_x_two"><%= render "news/local_news" %></div>
 </div>
 
 
