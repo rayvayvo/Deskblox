@@ -9,29 +9,28 @@
   background-color:#0b2856;
 }
 
-.six_x_six {
+.base_block {
   border-style: solid;
   border-radius: 5px;
   border-color: #1f2d42;
-  width: 48vw;
-  height:30vw;
   background:#555;
   margin:1%;
   float:left;
+}
+
+.six_x_six {
+  @extend .base_block;
+  width: 48vw;
+  height:30vw;
 }
 
 .twelve_x_two {
-  border-style: solid;
-  border-radius: 5px;
-  border-color: #1f2d42;
+  @extend .base_block;
   width: 98vw;
   height:10vw;
-  background:#555;
-  margin:1%;
-  float:left;
 }
 
-.blox_datetime {
+.centered {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
@@ -49,83 +48,52 @@
   color: darkcyan;
 }
 
-#thunderstorm {
-  background-image: url(thunderstorm.jpeg);
+.base_weather {
   background-size: cover;
   color: white;
   text-shadow: 1px 1px 1px black;
   text-align: center;
   font-size: 4.5em;
+}
+
+#thunderstorm {
+  @extend .base_weather;
+  background-image: url(thunderstorm.jpeg);
 }
 
 #cloudy {
   background-image: url(cloudy.jpg);
-  background-size: cover;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  font-size: 4.5em;
-
+  @extend .base_weather;
 }
 
 #rain {
+  @extend .base_weather;
   background-image: url(rain.jpeg);
-  background-size: cover;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  font-size: 4.5em;
-
 }
 
 #partly_cloudy {
+  @extend .base_weather;
   background-image: url(partly_cloudy.jpeg);
-  background-size: cover;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  font-size: 4.5em;
-
 }
 
 #sunny {
+  @extend .base_weather;
   background-image: url(sunny.jpeg);
-  background-size: cover;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  font-size: 4.5em;
-
 }
 
 #snow {
+  @extend .base_weather;
   background-image: url(snow.jpeg);
-  background-size: cover;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  font-size: 4.5em;
-
 }
 
 #fog {
+  @extend .base_weather;
   background-image: url(fog.jpeg);
-  background-size: cover;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  font-size: 4.5em;
-
 }
 
 #sleet {
+  @extend .base_weather;
   background-image: url(sleet.jpeg);
-  background-size: cover;
-  color: white;
-  text-shadow: 1px 1px 1px black;
-  text-align: center;
-  font-size: 4.5em;
-
 }
 
 #weather_title {
