@@ -10,6 +10,7 @@ User.create(
   email: "desk@blox.com",
   password: "blocky",
   theme_id: 1
+  password_digest: ""
 )
 
 Widget.create(
@@ -17,9 +18,3 @@ Widget.create(
   source: 'accuweather'
 )
 
-# create_table "widgets", force: :cascade do |t|
-#     t.string   "body"
-#     t.string   "source"
-#     t.datetime "created_at", null: false
-#     t.datetime "updated_at", null: false
-#   end

@@ -2,10 +2,10 @@
 
 one:
   email: MyString
-  password: MyString
+  password_digest: MyString
   theme_id: MyString
 
 two:
   email: MyString
-  password: MyString
+  password_digest: MyString
   theme_id: MyString
