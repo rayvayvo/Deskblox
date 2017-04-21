@@ -6,31 +6,36 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<script>
-function startTime() {
-    var today = new Date();
-    var h = today.getHours();
-    var m = today.getMinutes();
-    var s = today.getSeconds();
-    m = checkTime(m);
-    s = checkTime(s);
-    document.getElementById('txt').innerHTML =
-    h + ":" + m + ":" + s;
-    var t = setTimeout(startTime, 500);
-}
-function checkTime(i) {
-    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-    return i;
-}
-</script>
+
 </head>
 
-<h1>Dashboard index!</h1>
-<span> the time is: <strong id="txt"></strong></span>
-<h3> the date is <%= Date.today %></h3>
+  <div id="main_login">
+    <strong>Log in:</strong>
 
-<h4>visiting from <%= request.location %> </h4>
+    <%= form_tag '/login' do %>
+    Email: <%= text_field_tag :email %>
+    Password: <%= password_field_tag :password %>
+    <%= submit_tag "Submit" %>
 
-<body onload="startTime()">
-</body>
+    <% end %>
+
+  </div><br><br>
+
+
+<h1>Welcome to DeskBloX</h1>
+
+
+<div id="main_register">
+  <strong>Register: </strong><br><br>
+
+    <%= form_for :user, url: '/users' do |f| %>
+
+    Email: <%= f.text_field :email %><br><br>
+    Password: <%= f.password_field :password %><br><br>
+    Password Confirmation: <%= f.password_field :password_confirmation %><br><br>
+    <%= f.submit "Submit" %>
+
+    <% end %>
+
+  </div>
 </html>
