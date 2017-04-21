@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   root to: 'dashboard#index'
+  get 'news/index'
 
   get 'blocks/index'
 

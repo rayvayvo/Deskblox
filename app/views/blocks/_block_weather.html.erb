@@ -1,19 +1,18 @@
 
-<div>
+<div class="centered">
   <div>
     <strong id="weather_title">
       <%= category['Headline']['Category'] %>
-    </strong></div>
+    </strong>
+  </div>
   <div>high of:
     <strong>
-      <%= ((category['DailyForecasts'].first['Temperature']['Maximum']['Value'] - 32) * 0.5556).round %>
-      &#8451
-    </strong></div>
-  <div>low of:
+      <%= temp_f_to_c(category['DailyForecasts'].first['Temperature']['Maximum']['Value']) %> &#8451
+    </strong>
+  </div>
+    <div>low of:
     <strong>
-    <%= ((category['DailyForecasts'].first['Temperature']['Minimum']['Value'] -32)* 0.5556).round %>
-      &#8451
-    </strong></div>
-
-    </div>
+      <%= temp_f_to_c(category['DailyForecasts'].first['Temperature']['Minimum']['Value']) %> &#8451
+    </strong>
+  </div>
 </div>

@@ -67,4 +67,8 @@ module BlocksHelper
       end
     end
   end
+
+  def temp_f_to_c(temp_f)
+    return ((temp_f - 32) * 0.5556).round
+  end
 end
