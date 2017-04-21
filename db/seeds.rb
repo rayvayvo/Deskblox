@@ -8,8 +8,7 @@
 
 User.create(
   email: "desk@blox.com",
-  password: "blocky",
-  theme_id: 1
+  theme_id: 1,
   password_digest: ""
 )
 

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'news/index'
+
   get 'blocks/index'
 
   resources :users
