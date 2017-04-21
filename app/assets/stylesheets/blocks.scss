@@ -48,54 +48,78 @@
   color: darkcyan;
 }
 
+#weather_title {
+  border-bottom: 0.5vw solid;
+  font-weight: 500;
+}
+
+.weather_info {
+  display: block;
+}
+
+.weather_key {
+  display: inline-block;
+  font-weight: 500;
+}
+
+.weather_value {
+  display: inline-block;
+}
+
 .base_weather {
   background-size: cover;
-  color: white;
   text-shadow: 1px 1px 1px black;
   text-align: center;
-  font-size: 4.5em;
+  font-size: 5vw;
 }
 
 #thunderstorm {
   @extend .base_weather;
+  color: white;
   background-image: url(thunderstorm.jpeg);
 }
 
 #cloudy {
   background-image: url(cloudy.jpg);
+  color: midnightblue;
   @extend .base_weather;
 }
 
 #rain {
   @extend .base_weather;
+  color: aliceblue;
   background-image: url(rain.jpeg);
 }
 
 #partly_cloudy {
   @extend .base_weather;
+  color: indigo;
   background-image: url(partly_cloudy.jpeg);
 }
 
 #sunny {
   @extend .base_weather;
+  color: midnightblue;
   background-image: url(sunny.jpeg);
 }
 
 #snow {
   @extend .base_weather;
+  color: midnightblue;
   background-image: url(snow.jpeg);
 }
 
 #fog {
   @extend .base_weather;
+  color: indianred;
   background-image: url(fog.jpeg);
 }
 
 #sleet {
   @extend .base_weather;
+  color: cornsilk;
   background-image: url(sleet.jpeg);
 }
 
-#weather_title {
-  border-bottom: 1px solid;
-}
+
+
