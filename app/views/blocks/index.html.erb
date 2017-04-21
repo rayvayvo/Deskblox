@@ -9,8 +9,9 @@
       </div>
     </div>
   </div>
-  <div class="six_x_six">
-  <%= render "block_weather" %>
+  <% category = type_check %>
+  <div class="six_x_six" id="<%= category['Headline']['Category'] %>" >
+  <%= render :partial => "block_weather", :locals => {:category => category} %>
   <div class="twelve_x_two">News: World</div>
   <div class="twelve_x_two">News: Local</div>
 </div>

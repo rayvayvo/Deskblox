@@ -48,3 +48,86 @@
   font-size: 2vw;
   color: darkcyan;
 }
+
+#thunderstorm {
+  background-image: url(thunderstorm.jpeg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+}
+
+#cloudy {
+  background-image: url(cloudy.jpg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+
+}
+
+#rain {
+  background-image: url(rain.jpeg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+
+}
+
+#partly_cloudy {
+  background-image: url(partly_cloudy.jpeg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+
+}
+
+#sunny {
+  background-image: url(sunny.jpeg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+
+}
+
+#snow {
+  background-image: url(snow.jpeg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+
+}
+
+#fog {
+  background-image: url(fog.jpeg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+
+}
+
+#sleet {
+  background-image: url(sleet.jpeg);
+  background-size: cover;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  font-size: 4.5em;
+
+}
+
+#weather_title {
+  border-bottom: 1px solid;
+}

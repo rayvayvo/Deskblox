@@ -13,8 +13,8 @@ User.create(
 )
 
 Widget.create(
-  body: "apikey=%20%09tVhULZkgATwDv7y6vlJaYjtbqy8FVepU%20",
-  source: 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/55488?'
+  body: "http://dataservice.accuweather.com/forecasts/v1/daily/1day/55488?apikey=%20%09tVhULZkgATwDv7y6vlJaYjtbqy8FVepU%20",
+  source: 'accuweather'
 )
 
 # create_table "widgets", force: :cascade do |t|
