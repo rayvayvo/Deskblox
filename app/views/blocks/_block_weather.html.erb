@@ -1,18 +1,17 @@
-
 <div class="centered">
-  <div>
-    <strong id="weather_title">
-      <%= category['Headline']['Category'] %>
-    </strong>
+  <div id="weather_title">
+      <%= category['Headline']['Category'].capitalize %>
   </div>
-  <div>high of:
-    <strong>
+  <div class="weather_info">
+    <div class="weather_key">High of:</div>
+    <div class="weather_value">
       <%= temp_f_to_c(category['DailyForecasts'].first['Temperature']['Maximum']['Value']) %> &#8451
-    </strong>
+    </div>
   </div>
-    <div>low of:
-    <strong>
+  <div class="weather_info">
+    <div class="weather_key">Low of:</div>
+    <div class="weather_value">
       <%= temp_f_to_c(category['DailyForecasts'].first['Temperature']['Minimum']['Value']) %> &#8451
-    </strong>
+    </div>
   </div>
 </div>
