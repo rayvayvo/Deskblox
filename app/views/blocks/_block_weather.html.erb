@@ -1,6 +1,6 @@
 <div class="centered">
   <div id="weather_title">
-      <%= category['Headline']['Category'].capitalize %>
+      <%= category['Headline']['Category'].gsub!(/_/, ' ').capitalize %>
   </div>
   <div class="weather_info">
     <div class="weather_key">High of:</div>
