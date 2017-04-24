@@ -9,6 +9,7 @@
 
 </head>
 
+<header>
   <div id="main_login">
     <strong>Log in:</strong>
 
@@ -19,23 +20,26 @@
 
     <% end %>
 
-  </div><br><br>
+  </div></header>
 
+<body id="homebody">
 
-<h1>Welcome to DeskBloX</h1>
-
-
-<div id="main_register">
-  <strong>Register: </strong><br><br>
-
-    <%= form_for :user, url: '/users' do |f| %>
-
-    Email: <%= f.text_field :email %><br><br>
-    Password: <%= f.password_field :password %><br><br>
-    Password Confirmation: <%= f.password_field :password_confirmation %><br><br>
-    <%= f.submit "Submit" %>
-
-    <% end %>
-
+  <div id="welcome">
+    <strong>Welcome to DeskBloX</strong>
   </div>
+
+  <div id="main_register">
+    <strong>Register: </strong><br><br>
+
+      <%= form_for :user, url: '/users' do |f| %>
+
+      Email: <%= f.text_field :email %><br><br>
+      Password: <%= f.password_field :password %><br><br>
+      Password Confirmation: <%= f.password_field :password_confirmation %><br><br>
+      <%= f.submit "Submit" %>
+
+      <% end %>
+
+    </div>
+</body>
 </html>

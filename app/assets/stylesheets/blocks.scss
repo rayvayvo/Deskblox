@@ -122,48 +122,6 @@
   background-image: url(sleet.jpeg);
 }
 
-#main_login {
-  float: right;
-background: coral;
-width: 100%;
-position: absolute;
-top: 0;
-height: 4em;
-}
-
-#main_login strong {
-  position: relative;
-  top: 10%;
-  font-size: 2em;
-  left: 50%;
-}
-
-#main_login form {
-  float: right;
-  padding-top: 1vw;
-  padding-right: 1vw;
-}
-
-#main_register {
-  background: cornflowerblue;
-  float: right;
-  margin-top: 20%;
-  margin-right: 10%;
-  width: 30%;
-}
-
-#user_email {
-  float: right;
-}
-
-#user_password {
-  float: right;
-}
-
-#user_password_confirmation {
-  float: right;
-}
-
 #dropdownMenu2 {
   background-color: aliceblue;
   margin-left: 96%;
