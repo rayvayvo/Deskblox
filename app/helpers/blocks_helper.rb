@@ -2,8 +2,8 @@ module BlocksHelper
 
 def type_check
   widget = Widget.find(1)
-  if widget.source == "accuweather"
-    weather = HTTP.get("#{widget.body}").parse
+  if widget.data_source == "accuweather"
+    weather = HTTP.get("#{widget.data_url}").parse
     icon_phrase = weather['DailyForecasts'].first['Day']['IconPhrase'].downcase
 
     if icon_phrase == "t-storms" ||

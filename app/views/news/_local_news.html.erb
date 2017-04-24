@@ -1,1 +1,3 @@
-<div class="marquee_fast news"><%= getHeadlines('local', 5) %></div>
+<% getHeadlines('local', 5) %>
+<% news_blob = Widget.where(["data_source = ?", 'local']).last %>
+<div class="marquee_fast news"><%= news_blob.data_string %></div>
