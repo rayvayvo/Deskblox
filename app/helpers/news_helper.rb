@@ -1,4 +1,4 @@
-module TorStarNewsHelper
+module NewsHelper
   def getHeadlines(feed_type, number_articles)
     storyfeed =''
     feed_url = case feed_type
@@ -15,5 +15,9 @@ module TorStarNewsHelper
       data_url: feed_url,
       data_source: feed_type,
       data_string: storyfeed)
+  end
+
+  def clearOldNews()
+    Widget.where("data_source = 'local' OR data_source = 'topstory' AND created_at < '#{1.days.ago}'").destroy_all
   end
 end
