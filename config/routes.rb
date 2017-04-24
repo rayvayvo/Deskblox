@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'you_tube/_youtube'
+
   root to: 'dashboard#index'
   get 'news/index'
 
