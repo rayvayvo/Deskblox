@@ -4,6 +4,7 @@ module NewsHelper
     feed_url = case feed_type
       when 'local' then 'http://www.thestar.com/feeds.articles.news.rss'
       when 'topstory' then 'http://rss.cbc.ca/lineup/topstories.xml'
+      when 'onion'  then 'http://www.theonion.com/feeds/rss'
       else ''
     end
     feed = Feedjira::Feed.fetch_and_parse feed_url
