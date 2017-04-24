@@ -61,3 +61,5 @@ bower.json
 
 
 *.log
+
+*.sqlite3

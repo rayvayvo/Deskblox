@@ -13,7 +13,7 @@ User.create(
 )
 
 Widget.create(
-  body: "http://dataservice.accuweather.com/forecasts/v1/daily/1day/55488?apikey=%20%09tVhULZkgATwDv7y6vlJaYjtbqy8FVepU%20",
-  source: 'accuweather'
+  data_url: "http://dataservice.accuweather.com/forecasts/v1/daily/1day/55488?apikey=%20%09tVhULZkgATwDv7y6vlJaYjtbqy8FVepU%20",
+  data_source: 'accuweather'
 )
 
