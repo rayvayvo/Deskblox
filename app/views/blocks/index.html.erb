@@ -1,4 +1,4 @@
-<div class='dashblox'>
+<div class='dashblox <%= current_user.theme_id %>'>
   <div class="six_x_six"><%= render "block_datetime" %></div>
   <% category = type_check %>
   <div class="six_x_six" id="<%= category['Headline']['Category'] %>" >
@@ -8,18 +8,43 @@
   <div class="twelve_x_two"><%= render "news/local_news" %></div>
 </div>
 
+<% @user = @current_user %>
+
 <div class="dropup" id="drop_down_div">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="caret"></span>
   </button>
-  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+  <ul class="dropdown-menu dropdown-menu-right" id="settings1" aria-labelledby="dropdownMenu2">
     <li><a href="#">Action</a></li>
     <li><a href="#">Another action</a></li>
-    <li><a href="#">Something else here</a></li>
+    <li class="dropdown-submenu">
+        <a class="test" tabindex="-1" href="#"><span class="glyphicon glyphicon-triangle-left"></span>Choose Theme</a>
+          <ul class="dropdown-menu" id="theme_pick">
+
+
+            <li><%= form_for @user, :method => "put" do |f| %>
+
+            <%= f.hidden_field(:email, :value => @user.email) %>
+            <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
+            <%= f.hidden_field(:theme_id, :value => 4) %>
+
+            <%= f.submit yield %></li>
+          <% end %></ul>
+
+    </li>
+
     <li role="separator" class="divider"></li>
     <li><%= link_to "Logout", '/logout' %></li>
   </ul>
 </div>
 
 
-
+<script>
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>

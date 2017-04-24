@@ -52,6 +52,22 @@ def type_check
   end
 end
 
+   def theme_1
+    User.where(["email = ?" , current_user.email]).first.theme_id = 1
+  end
+
+  def theme_2
+    User.where(["email = ?" , current_user.email]).first.theme_id = 2
+  end
+
+  def theme_3
+    User.where(["email = ?" , current_user.email]).first.theme_id = 3
+  end
+
+  def theme_4
+    User.where(["email = ?" , current_user.email]).first.theme_id = 4
+  end
+
   def temp_f_to_c(temp_f)
     return ((temp_f - 32) * 0.5556).round
   end
