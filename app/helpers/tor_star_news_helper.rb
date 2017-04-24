@@ -11,6 +11,9 @@ module TorStarNewsHelper
     all_items.each do | story |
       storyfeed = storyfeed + ' • ' + story.title
     end
-    return storyfeed
+    Widget.create(
+      data_url: feed_url,
+      data_source: feed_type,
+      data_string: storyfeed)
   end
 end
