@@ -8,5 +8,18 @@
   <div class="twelve_x_two"><%= render "news/local_news" %></div>
 </div>
 
+<div class="dropup" id="drop_down_div">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu2">
+    <li><a href="#">Action</a></li>
+    <li><a href="#">Another action</a></li>
+    <li><a href="#">Something else here</a></li>
+    <li role="separator" class="divider"></li>
+    <li><%= link_to "Logout", '/logout' %></li>
+  </ul>
+</div>
+
 
 
