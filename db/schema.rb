@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170424163949) do
+ActiveRecord::Schema.define(version: 20170425164057) do
+
+  create_table "settings", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "widget1_id"
+    t.string   "widget2_id"
+    t.string   "widget3_id"
+    t.string   "widget4_id"
+    t.string   "widget5_id"
+    t.string   "widget6_id"
+    t.string   "layout_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "themes", force: :cascade do |t|
     t.string   "colour"
@@ -38,6 +51,7 @@ ActiveRecord::Schema.define(version: 20170424163949) do
   create_table "widgets", force: :cascade do |t|
     t.string   "data_url"
     t.string   "data_source"
+    t.string    "name"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "data_string"

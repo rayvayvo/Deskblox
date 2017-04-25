@@ -12,9 +12,12 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
+
+
   resources :users
   resources :blocks
   resources :weather, only: [:index]
+  resources :settings, only: [:index, :update]
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

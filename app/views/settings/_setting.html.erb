@@ -1,0 +1,79 @@
+<% @setting = current_user%>
+
+<div>
+  Widget 1:
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <%= setting.widget1_id %>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li class="theme_picker" id="pick_theme_1">
+
+            <%= form_for @setting, :method => "put" do |f| %>
+            <%= f.hidden_field(:user_id, :value => "#{current_user.id}") %>
+            <%= f.hidden_field(:widget1_id, :value => 1) %>
+            <%= f.submit "#{Widget.find(1).name}" %><% end %></li>
+  </ul>
+  </div>
+</div><br><br>
+
+<div>
+  Widget 2:
+  <div class="dropdown">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+    <%= Widget.find(setting.widget1_id).name %>
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+    <li class="theme_picker" id="pick_theme_1">
+
+            <%= form_for @setting, :method => "put" do |f| %>
+            <%= f.hidden_field(:user_id, :value => "#{current_user.id}") %>
+            <%= f.hidden_field(:widget1_id, :value => 1) %>
+            <%= f.submit "#{Widget.find(1).name}" %><% end %></li>
+  </ul>
+  </div>
+</div><br><br>
+
+<div>
+  Widget 3:
+<% if setting.widget3_id == nil %>
+  <strong>n/a</strong>
+<% else %>
+  <%= setting.widget3_id%>
+<% end %>
+</div><br><br>
+
+<div>
+  Widget 4:
+<% if setting.widget4_id == nil %>
+  <strong>n/a</strong>
+<% else %>
+  <%= setting.widget4_id%>
+<% end %>
+</div><br><br>
+
+<div>
+  Widget 5:
+<% if setting.layout_id == "1" %>
+  <strong>n/a</strong>
+<% else %>
+  <%= setting.widget5_id%>
+<% end %>
+</div><br><br>
+
+<div>
+  Widget 6:
+<% if setting.layout_id === "1" %>
+  <strong>n/a</strong>
+  <% else %>
+  <%= setting.widget6_id%>
+<% end %>
+</div><br><br>
+
+<div>
+  Layout: <%= setting.layout_id %>
+</div>
+
+<%= console %>

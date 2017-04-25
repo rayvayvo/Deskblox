@@ -1,28 +1,43 @@
-<div class='dashblox theme_<%= current_user.theme_id %>'>
-  <div class="six_x_six theme_<%= current_user.theme_id%>" id="clock">
-    <%= render "block_datetime" %>
-  </div>
-  <% category = type_check %>
+<% category = type_check %>
+<% @user = @current_user %>
+<% widget1 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget1_id).name %>
+<% widget2 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget2_id).name %>
+<% widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget3_id).name %>
+<% widget4 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget4_id).name %>
+<%# widget5 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget5_id).name %>
+<%# widget6 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget6_id).name %>
 
-  <div class="six_x_six theme_<%= current_user.theme_id%>" id="<%= category['Headline']['Category'] %>" >
-    <%= render :partial => "block_weather", :locals => {:category => category} %>
+
+
+
+<div class='dashblox theme_<%= current_user.theme_id %>'>
+
+
+ <div class="six_x_six theme_<%= current_user.theme_id%> <%= widget1 %>" id="datetime" >
+    <%= render :partial => "block_datetime", :locals => {:category => category} %>
   </div>
+
+  <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget2 %>">
+    <%= render :partial => "block_#{widget2}", :locals => {:category => category} %>
+  </div>
+
+
   <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/world_news" %></div>
+
   <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/local_news" %></div>
+
 </div>
 
+<%= console %>
 
 
-
-<% @user = @current_user %>
 
 <div class="dropup theme_<%= current_user.theme_id%>" id="drop_down_div">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="caret"></span>
   </button>
   <ul class="dropdown-menu dropdown-menu-right" id="settings1" aria-labelledby="dropdownMenu2">
-    <li><a href="#">Action</a></li>
-    <li><a href="#">Another action</a></li>
+    <li><a href="/settings">settings</a></li>
     <li class="dropdown-submenu">
         <a class="test" tabindex="-1" href="#"><span class="glyphicon glyphicon-triangle-left"></span>Choose Theme</a>
           <ul class="dropdown-menu" id="theme_pick">

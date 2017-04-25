@@ -27,6 +27,17 @@ class UsersController < ApplicationController
   # POST /users.json
   def create
       user = User.new(user_params)
+      settings = Setting.new(
+        user_id: user.id,
+        widget1_id: 1,
+        widget2_id: 2,
+        widget3_id: 3,
+        widget4_id: 4,
+        widget5_id: nil,
+        widget6_id: nil,
+        layout_id: 1
+        )
+
     if user.save
       session[:user_id] = user.id
       redirect_to '/blocks'

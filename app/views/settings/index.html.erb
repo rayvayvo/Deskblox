@@ -1,0 +1,5 @@
+<div>
+<h1>User Settings</h1>
+</div>
+
+<%= render :partial => 'setting', :object => Setting.find("#{current_user.id}") %>

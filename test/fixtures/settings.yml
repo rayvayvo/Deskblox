@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  widget1_id: MyString
+  widget2_id: MyString
+  widget3_id: MyString
+  widget4_id: MyString
+  widget_5id: MyString
+  widget6_id: MyString
+  layout_id: MyString
+
+two:
+  user_id: MyString
+  widget1_id: MyString
+  widget2_id: MyString
+  widget3_id: MyString
+  widget4_id: MyString
+  widget_5id: MyString
+  widget6_id: MyString
+  layout_id: MyString

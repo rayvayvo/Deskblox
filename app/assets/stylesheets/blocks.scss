@@ -75,49 +75,49 @@
   font-size: 5vw;
 }
 
-#thunderstorm {
+#weather.thunderstorm {
   @extend .base_weather;
   color: white;
   background-image: url(thunderstorm.jpeg);
 }
 
-#cloudy {
+#weather.cloudy {
   background-image: url(cloudy.jpg);
   color: midnightblue;
   @extend .base_weather;
 }
 
-#rain {
+#weather.rain {
   @extend .base_weather;
   color: aliceblue;
   background-image: url(rain.jpeg);
 }
 
-#partly_cloudy {
+#weather.partly_cloudy {
   @extend .base_weather;
   color: indigo;
   background-image: url(partly_cloudy.jpeg);
 }
 
-#sunny {
+#weather.sunny {
   @extend .base_weather;
   color: midnightblue;
   background-image: url(sunny.jpeg);
 }
 
-#snow {
+#weather.snow {
   @extend .base_weather;
   color: midnightblue;
   background-image: url(snow.jpeg);
 }
 
-#fog {
+#weather.fog {
   @extend .base_weather;
   color: indianred;
   background-image: url(fog.jpeg);
 }
 
-#sleet {
+#weather.sleet {
   @extend .base_weather;
   color: cornsilk;
   background-image: url(sleet.jpeg);
@@ -171,24 +171,25 @@
   width: 100%;
 }
 
-#clock {
+#datetime {
   background-size: cover;
   text-shadow: 1px 1px 1px black;
-}
-
-#clock.theme_1 {
   background-image: url(coolclock.jpeg);
+
 }
 
-#clock.theme_2 {
+#datetime.theme_1 {
+}
+
+#datetime.theme_2 {
   background-image: url(dayclock.jpeg);
 }
 
-#clock.theme_3 {
+#datetime.theme_3 {
   background-image: url(nightclock.jpeg);
 }
 
-#clock.theme_4 {
+#datetime.theme_4 {
   background-image: url(wackyclock.jpeg);
 }
 
