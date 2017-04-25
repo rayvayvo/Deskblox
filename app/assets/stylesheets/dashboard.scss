@@ -1,3 +1,109 @@
 // Place all the styles related to the Dashboard controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import url('https://fonts.googleapis.com/css?family=Rationale');
+
+#landing_body {
+  background-image: url("NASA_AB_4K.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  background-color: black;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#landing_header {
+  float: right;
+  background: black;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 10vh;
+  overflow: hidden;
+}
+
+.branding {
+  @extend .centered;
+  font-family: 'Rationale', sans-serif;
+  color: aliceblue;
+  float: left;
+  padding-left: 2vw;
+  font-size: 4vw;
+}
+
+.login_box {
+  @extend .centered;
+  color: aliceblue;
+  float: right;
+  padding-right: 1vh;
+}
+
+.login_label {
+  font-size: 2.5vh;
+
+}
+
+.login_form {
+  float: right;
+  font-size: 2vh;
+}
+
+.btn_login {
+  color: black;
+  border-style: solid;
+  border-color: black;
+  background-color: white;
+}
+
+#register_box {
+  background: transparent;
+  float: right;
+  margin-top: 25%;
+  padding-right: 10%;
+  width: 44%;
+  color: black;
+  margin-right: 0.5vw;
+}
+.register_inner {
+  border-style: solid;
+  border-radius: 7px;
+  padding: 1vw;
+  background-color: grey;
+  opacity: 1;
+}
+
+.register_content {
+  color: aliceblue;
+  font-size: 1.5vw;
+  opacity: 1;
+}
+
+.register_form {
+  height: 3vw;
+
+}
+
+#user_email {
+  float: right;
+  height: 2vw;
+}
+
+#user_password {
+  float: right;
+  height: 2vw;
+}
+
+#user_password_confirmation {
+  float: right;
+  height: 2vw;
+}
+
+
+.img_reflection {
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent) , to(rgba(250, 250, 250, 0.1)));
+}

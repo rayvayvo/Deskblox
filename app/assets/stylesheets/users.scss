@@ -2,51 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-#landing_body {
-  background-image: url("NASA_AB_4K.jpg");
-  background-repeat:no-repeat;
-  background-size:cover;
-  background-color: black;
-}
 
-.centered {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#landing_header {
-  float: right;
-  background: orange;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  height: 10vh;
-  overflow: hidden;
-}
-
-.branding {
-  @extend .centered;
-  float: left;
-  padding-left: 2vw;
-  font-size: 4vw;
-}
-
-.login_box {
-  @extend .centered;
-  float: right;
-  padding-right: 1vh;
-}
-
-.login_label {
-  font-size: 2.5vh;
-
-}
-
-.login_form {
-  float: right;
-  font-size: 1.5vh;
-}
 
 // #main_login strong {
 //   position: relative;
