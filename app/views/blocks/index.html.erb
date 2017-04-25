@@ -1,5 +1,5 @@
 <div class='dashblox'>
-  <div class="six_x_six"><%= render "you_tube/youtube" %></div>
+  <div class="six_x_six"><%= render "block_datetime" %></div>
   <% category = type_check %>
   <div class="six_x_six" id="<%= category['Headline']['Category'] %>" >
     <%= render :partial => "block_weather", :locals => {:category => category} %>
