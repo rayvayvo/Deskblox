@@ -1,16 +1,22 @@
-<div class='dashblox <%= current_user.theme_id %>'>
-  <div class="six_x_six"><%= render "block_datetime" %></div>
+<div class='dashblox theme_<%= current_user.theme_id %>'>
+  <div class="six_x_six theme_<%= current_user.theme_id%>" id="clock">
+    <%= render "block_datetime" %>
+  </div>
   <% category = type_check %>
-  <div class="six_x_six" id="<%= category['Headline']['Category'] %>" >
+
+  <div class="six_x_six theme_<%= current_user.theme_id%>" id="<%= category['Headline']['Category'] %>" >
     <%= render :partial => "block_weather", :locals => {:category => category} %>
   </div>
-  <div class="twelve_x_two"><%= render "news/world_news" %></div>
-  <div class="twelve_x_two"><%= render "news/local_news" %></div>
+  <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/world_news" %></div>
+  <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/local_news" %></div>
 </div>
+
+
+
 
 <% @user = @current_user %>
 
-<div class="dropup" id="drop_down_div">
+<div class="dropup theme_<%= current_user.theme_id%>" id="drop_down_div">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     <span class="caret"></span>
   </button>
@@ -21,15 +27,31 @@
         <a class="test" tabindex="-1" href="#"><span class="glyphicon glyphicon-triangle-left"></span>Choose Theme</a>
           <ul class="dropdown-menu" id="theme_pick">
 
+            <li class="theme_picker" id="pick_theme_1"><%= form_for @user, :method => "put" do |f| %>
+            <%= f.hidden_field(:email, :value => @user.email) %>
+            <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
+            <%= f.hidden_field(:theme_id, :value => 1) %>
+            <%= f.submit "Coolblue" %><% end %></li>
 
-            <li><%= form_for @user, :method => "put" do |f| %>
+            <li class="theme_picker" id="pick_theme_2"><%= form_for @user, :method => "put" do |f| %>
+            <%= f.hidden_field(:email, :value => @user.email) %>
+            <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
+            <%= f.hidden_field(:theme_id, :value => 2) %>
+            <%= f.submit "Whiteout" %><% end %></li>
 
+            <li class="theme_picker" id="pick_theme_3"><%= form_for @user, :method => "put" do |f| %>
+            <%= f.hidden_field(:email, :value => @user.email) %>
+            <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
+            <%= f.hidden_field(:theme_id, :value => 3) %>
+            <%= f.submit "Night Sky" %><% end %></li>
+
+            <li class="theme_picker" id="pick_theme_4"><%= form_for @user, :method => "put" do |f| %>
             <%= f.hidden_field(:email, :value => @user.email) %>
             <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
             <%= f.hidden_field(:theme_id, :value => 4) %>
+            <%= f.submit "Wacky" %><% end %></li>
 
-            <%= f.submit yield %></li>
-          <% end %></ul>
+          </ul>
 
     </li>
 

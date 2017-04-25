@@ -128,8 +128,9 @@
   margin-left: 96%;
 }
 
-#drop_down_div.dropup {
-  background-color: #0b2856;
+#drop_down_div.dropup.theme_1{
+  background-color:#0b2856;
+
 }
 
 #settings1 {
@@ -139,4 +140,81 @@
 #theme_pick {
   margin-left: -13vw;
   margin-bottom: -5vw;
+  padding: 0px;
+}
+
+.theme_picker {
+  border: none;
+  width: 100%;
+}
+
+#pick_theme_1 input{
+  background-color:#0b2856;
+  color: aliceblue;
+  width: 100%;
+}
+
+#pick_theme_2 input{
+  background-color: white;
+  color: black;
+  width: 100%;
+}
+
+#pick_theme_3 input{
+  background-color: black;
+  color: gold;
+  width: 100%;
+}
+
+#pick_theme_4 input{
+  background-color: pink;
+  width: 100%;
+}
+
+#clock {
+  background-size: cover;
+  text-shadow: 1px 1px 1px black;
+}
+
+#clock.theme_1 {
+  background-image: url(coolclock.jpeg);
+}
+
+#clock.theme_2 {
+  background-image: url(dayclock.jpeg);
+}
+
+#clock.theme_3 {
+  background-image: url(nightclock.jpeg);
+}
+
+#clock.theme_4 {
+  background-image: url(wackyclock.jpeg);
+}
+
+.theme_2 {
+  background-color: black;
+  color: white;
+}
+
+.dashblox.theme_2 {
+  background-color: #ffffff;
+}
+
+.theme_3 {
+  background-color: black;
+  color: black;
+}
+
+.dashblox.theme_3 {
+  background-color: #000000;
+}
+
+.theme_4 {
+  background-color: darkcyan;
+  color: black;
+}
+
+.dashblox.theme_4 {
+  background-color: orange;
 }
