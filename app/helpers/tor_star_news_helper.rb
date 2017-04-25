@@ -14,6 +14,9 @@ module TorStarNewsHelper
     Widget.create(
       data_url: feed_url,
       data_source: feed_type,
-      data_string: storyfeed)
+      data_string: storyfeed,
+      size: "medium",
+      name: "#{feed_type}_news"
+      )
   end
 end

@@ -2,8 +2,8 @@
 <% @user = @current_user %>
 <% widget1 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget1_id).name %>
 <% widget2 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget2_id).name %>
-<% widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget3_id).name %>
-<% widget4 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget4_id).name %>
+<%# widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget3_id).name %>
+<%# widget4 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget4_id).name %>
 <%# widget5 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget5_id).name %>
 <%# widget6 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget6_id).name %>
 
@@ -13,8 +13,8 @@
 <div class='dashblox theme_<%= current_user.theme_id %>'>
 
 
- <div class="six_x_six theme_<%= current_user.theme_id%> <%= widget1 %>" id="datetime" >
-    <%= render :partial => "block_datetime", :locals => {:category => category} %>
+ <div class="six_x_six theme_<%= current_user.theme_id%>" id="<%= widget1 %>" >
+    <%= render :partial => "block_#{widget1}", :locals => {:category => category} %>
   </div>
 
   <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget2 %>">

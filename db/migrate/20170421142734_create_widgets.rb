@@ -5,6 +5,7 @@ class CreateWidgets < ActiveRecord::Migration[5.0]
       t.string :body
       t.string :source
       t.string :name
+      t.string :size
 
       t.timestamps
     end

@@ -51,7 +51,8 @@ ActiveRecord::Schema.define(version: 20170425164057) do
   create_table "widgets", force: :cascade do |t|
     t.string   "data_url"
     t.string   "data_source"
-    t.string    "name"
+    t.string   "name"
+    t.string   "size"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.text     "data_string"
