@@ -1,45 +1,45 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8"/>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-</head>
-
-<header>
-  <div id="main_login">
-    <strong>Log in:</strong>
-
-    <%= form_tag '/login' do %>
-    Email: <%= text_field_tag :email %>
-    Password: <%= password_field_tag :password %>
-    <%= submit_tag "Submit" %>
-
-    <% end %>
-
-  </div></header>
-
-<body id="homebody">
-
-  <div id="welcome">
-    <strong>Welcome to DeskBloX</strong>
-  </div>
-
-  <div id="main_register">
-    <strong>Register: </strong><br><br>
-
-      <%= form_for :user, url: '/users' do |f| %>
-
-      Email: <%= f.text_field :email %><br><br>
-      Password: <%= f.password_field :password %><br><br>
-      Password Confirmation: <%= f.password_field :password_confirmation %><br><br>
-      <%= f.submit "Submit" %>
-
-      <% end %>
-
+<body id="landing_body">
+  <header id="landing_header">
+    <div class='branding'>
+    deskBlox
     </div>
+    <div class='login_box'>
+      <div class='login_form'>
+        <%= form_tag '/login' do %>
+          Email: <%= text_field_tag :email %>
+          Password: <%= password_field_tag :password %>
+          <%= submit_tag "Login", class:'btn_login'%>
+        <% end %>
+      </div>
+    </div>
+  </header>
+  <content>
+    <div id="register_box">
+      <div class="register_inner">
+        <div class="register_content">
+          <div class="register_title">Sign-up!</div>
+          <%= form_for :user, url: '/users', class: 'register_form' do |form| %>
+            <div class="form-group">
+              <%= form.label :email %>
+              <%= form.text_field :email, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= form.label :password %>
+              <%= form.password_field :password, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= form.label :password_confirmation %>
+              <%= form.password_field :password_confirmation, class: 'form-control' %>
+            </div>
+            <%= form.submit 'Create Account', class: 'btn_register' %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </content>
+  <footer id="landing_footer">
+
+  </footer>
 </body>
-</html>
+
+

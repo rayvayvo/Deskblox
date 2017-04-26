@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425164057) do
+ActiveRecord::Schema.define(version: 20170426172525) do
 
   create_table "settings", force: :cascade do |t|
-    t.string   "user_id"
-    t.string   "widget1_id"
-    t.string   "widget2_id"
-    t.string   "widget3_id"
-    t.string   "widget4_id"
-    t.string   "widget5_id"
-    t.string   "widget6_id"
-    t.string   "layout_id"
+    t.integer  "user_id"
+    t.integer  "widget1_id"
+    t.integer  "widget2_id"
+    t.integer  "widget3_id"
+    t.integer  "widget4_id"
+    t.integer  "widget5_id"
+    t.integer  "widget6_id"
+    t.integer  "layout_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,13 +49,11 @@ ActiveRecord::Schema.define(version: 20170425164057) do
   end
 
   create_table "widgets", force: :cascade do |t|
-    t.string   "data_url"
-    t.string   "data_source"
-    t.string   "name"
-    t.string   "size"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.text     "data_string"
+    t.string "data_url"
+    t.string "data_source"
+    t.string "name"
+    t.string "size"
+    t.text   "data_string"
   end
 
 end
