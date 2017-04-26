@@ -1,6 +1,5 @@
 class CreateSettings < ActiveRecord::Migration[5.0]
   def change
-    drop_table :settings
     create_table :settings do |t|
       t.integer :user_id
       t.integer :widget1_id
