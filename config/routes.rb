@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'twitter/_twitter'
+
   get 'you_tube/_youtube'
 
   root to: 'dashboard#index'
