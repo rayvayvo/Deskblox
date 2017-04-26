@@ -16,16 +16,11 @@
  <div class="six_x_six theme_<%= current_user.theme_id%>" id="<%= widget1 %>" >
     <%= render :partial => "block_#{widget1}", :locals => {:category => category} %>
   </div>
-
   <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget2 %>">
     <%= render :partial => "block_#{widget2}", :locals => {:category => category} %>
   </div>
-
-
   <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/world_news" %></div>
-
   <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/local_news" %></div>
-
 </div>
 
 <%= console %>
