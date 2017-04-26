@@ -3,7 +3,6 @@
 <% w2 = []
     w2.push(Widget.where("size == ?", "medium").last)
     w2.push(Widget.where("size == ?", "medium")[-2]) %>
-
 <div>
   Widget 1:
   <div class="dropdown">
@@ -17,7 +16,7 @@
         <% w1.each do |d| %>
             <%= form_for @setting, :method => "put" do |f| %>
             <%= f.hidden_field(:user_id, :value => "#{current_user.id}") %>
-            <%= f.hidden_field(:widget1_id, :value => 1) %>
+            <%= f.hidden_field(:widget1_id, :value => d.id) %>
             <%= f.submit "#{d.name}" %><% end %>
         <% end %>
     </li>
@@ -38,7 +37,7 @@
         <% w1.each do |d| %>
           <%= form_for @setting, :method => "put" do |f| %>
           <%= f.hidden_field(:user_id, :value => "#{current_user.id}") %>
-          <%= f.hidden_field(:widget1_id, :value => 1) %>
+          <%= f.hidden_field(:widget1_id, :value => d.id) %>
           <%= f.submit "#{d.name}" %><% end %>
         <% end %>
     </li>
