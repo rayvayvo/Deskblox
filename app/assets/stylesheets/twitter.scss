@@ -1,0 +1,50 @@
+// Place all the styles related to the twitter controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.tweets {
+  margin: 1vw;
+  border-style: solid;
+  height: 27.5vw;
+  overflow: auto;
+}
+
+.tweet {
+  border-style: solid;
+  margin: 0.25vw;
+  padding: 0.25vw;
+  border-radius: 7px;
+}
+
+.tweet_user {
+  display: block;
+  margin: 0.2vw 1vw;
+  border-bottom-style: double;
+}
+
+.tweet_avatar {
+  display: inline-block;
+  height: 2.5vw;
+  width: 2.5vw;
+  margin: 0.2vw 0;
+}
+
+.tweet_username {
+  display: inline-block;
+  font-size: 1.2vw;
+  color: aliceblue;
+  margin: 0 0.5vw;
+}
+
+.tweet_handle {
+  display: inline-block;
+  font-size: 0.9vw;
+  color: orangered;
+}
+
+.tweet_text {
+  color: aliceblue;
+  margin: 0px 4vw;
+  word-wrap: break-word;
+  padding: 0.5vw 0;
+  font-size: 1vw;
+}

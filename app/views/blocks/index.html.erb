@@ -27,7 +27,6 @@
 
 <div class='dashblox theme_<%= current_user.theme_id %>'>
 
-
  <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget1 %>" >
     <%= render :partial => "block_#{widget1}", :locals => {:category => category} %>
   </div>
@@ -53,8 +52,6 @@
 </div>
 
 <% render "news/onion_news" %>
-
-
 
 <div class="dropup theme_<%= current_user.theme_id%>" id="drop_down_div">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

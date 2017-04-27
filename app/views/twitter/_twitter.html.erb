@@ -1,0 +1,16 @@
+<% parse_timeline() %>
+<div class = 'tweets'>
+  <% tweets = getLatestTweets(20) %>
+  <% tweets.each do | tweet | %>
+    <% if not tweet.possibly_sensitive %>
+      <div class = 'tweet'>
+      <div class = 'tweet_user'>
+        <img class = 'tweet_avatar' src="<%= tweet.avatar %>">
+        <div class = 'tweet_username'><%= tweet.user_name %></div>
+        <div class = 'tweet_handle'>@<%= tweet.handle %></div>
+      </div>
+      <div class = 'tweet_text'><%= tweet.text %></div>
+      </div>
+    <% end %>
+  <% end %>
+</div>
