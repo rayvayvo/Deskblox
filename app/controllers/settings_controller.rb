@@ -11,7 +11,9 @@ before_action :set_setting
   def update
       @setting.update(
         widget1_id: "#{params[:setting]['widget1_id']}",
-        widget2_id: "#{params[:setting]['widget2_id']}"
+        widget2_id: "#{params[:setting]['widget2_id']}",
+        widget3_id: "#{params[:setting]['widget3_id']}",
+        widget4_id: "#{params[:setting]['widget4_id']}"
 
       )
         redirect_to "/blocks"

@@ -16,11 +16,15 @@
 
 <% widget1 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget1_id).name %>
 <% widget2 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget2_id).name %>
-<%# widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget3_id).name %>
-<%# widget4 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget4_id).name %>
+<% if Widget.last.size == "medium" %>
+  <% widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget3_id).name %>
+<% end %>
+<% if Widget.last(2)[0].size == "medium" %>
+  <% widget4 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget4_id).name %>
+<% end %>
 <%# widget5 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget5_id).name %>
 <%# widget6 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget6_id).name %>
-
+<% render "news/onion_news" %>
 
 
 
@@ -33,8 +37,22 @@
   <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget2 %>">
     <%= render :partial => "block_#{widget2}", :locals => {:category => category} %>
   </div>
-  <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/world_news" %></div>
-  <div class="twelve_x_two theme_<%= current_user.theme_id%>"><%= render "news/local_news" %></div>
+  <div class="twelve_x_two theme_<%= current_user.theme_id%>">
+
+  <% if widget3 %>
+    <%= render :partial => "news/#{widget3}", :locals => {:category => category} %>
+  <% else %>
+    <%= render "news/local_news" %>
+  <% end %>
+  </div>
+
+  <div class="twelve_x_two theme_<%= current_user.theme_id%>">
+  <% if widget4 %>
+    <%= render :partial => "news/#{widget4}", :locals => {:category => category} %>
+    <% else %>
+    <%= render "news/world_news" %>
+  <% end %>
+  </div>
 </div>
 
 

@@ -1,11 +1,17 @@
 <% @setting = Setting.where("user_id == ?", current_user.id).first %>
 <% w1 = Widget.where("size == ?", "large") %>
 <% w2 = []
-    w2.push(Widget.where("size == ?", "medium").last)
-    w2.push(Widget.where("size == ?", "medium")[-2]) %>
+    w2.push(Widget.where("data_source == ?", "local").last)
+    w2.push(Widget.where("data_source == ?", "topstory").last)
+    w2.push(Widget.where("data_source == ?", "onion").last) %>
 <% w1_name = []
   w1.each do |t|
   w1_name.push [t.name, t.id]
+end %>
+
+<% w2_name = []
+  w2.each do |t|
+  w2_name.push [t.name, t.id]
 end %>
 
 
@@ -31,17 +37,28 @@ end %>
   </div>
 </div><br><br>
 
+<div>
+  Widget 3:
+          <%= f.select(:widget3_id) do %>
+            <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget3_id).last.name).last.id) %>
+          <% end %>
+    </li>
+  </ul>
+  </div>
+</div><br><br>
 
+<div>
+  Widget 4:
+          <%= f.select(:widget4_id) do %>
+            <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget4_id).last.name).last.id) %>
+          <% end %>
+    </li>
+  </ul>
+  </div>
+</div><br><br>
 
 
   <%= f.submit "Save Changes" %>
 <% end %>
 
             <%= console %>
-
-
-<%#= f.select(:city_id) do %>
-  <%# [['Lisbon', 1], ['Madrid', 2]].each do |c| -%>
-    <%#= content_tag(:option, c.first, value: c.last) %>
-  <%# end %>
-<%# end %>
