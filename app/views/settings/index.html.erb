@@ -2,4 +2,4 @@
 <h1>User Settings</h1>
 </div>
 
-<%= render :partial => 'setting', :object => Setting.find("#{current_user.id}") %>
+<%= render :partial => 'setting', :object => Setting.where("user_id == ?", current_user.id) %>

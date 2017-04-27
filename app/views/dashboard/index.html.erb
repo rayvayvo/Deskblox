@@ -34,6 +34,9 @@
             <%= form.submit 'Create Account', class: 'btn_register' %>
           <% end %>
         </div>
+            <% flash.each do |key, value| %>
+              <div class="alert alert-<%= key %>"><%= value %></div>
+            <% end %>
       </div>
     </div>
   </content>

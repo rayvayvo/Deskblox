@@ -1,5 +1,19 @@
 <% category = type_check %>
 <% @user = @current_user %>
+
+<% if !Setting.where("user_id == ?", current_user.id).first
+  Setting.create(
+        user_id: current_user.id,
+        widget1_id: 1,
+        widget2_id: 2,
+        widget3_id: 3,
+        widget4_id: 4,
+        widget5_id: nil,
+        widget6_id: nil,
+        layout_id: 1
+        ) end %>
+
+
 <% widget1 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget1_id).name %>
 <% widget2 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget2_id).name %>
 <%# widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget3_id).name %>
@@ -13,7 +27,7 @@
 <div class='dashblox theme_<%= current_user.theme_id %>'>
 
 
- <div class="six_x_six theme_<%= current_user.theme_id%>" id="<%= widget1 %>" >
+ <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget1 %>" >
     <%= render :partial => "block_#{widget1}", :locals => {:category => category} %>
   </div>
   <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget2 %>">
