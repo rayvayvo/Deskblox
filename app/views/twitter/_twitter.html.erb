@@ -1,7 +1,3 @@
-<section>
-  <ul>
-    <% @tweets.each do |tweet| %>
-      <li><%= link_to tweet.text, "https://www.twitter.com/#{tweet.user.screen_name}" %></li>
-      <% end %>
-  </ul>
-</section>
+<% load_timeline() %>
+<% timeline = Widget.where(["data_source = ?", 'twitter_timeline']).last %>
+<div class="marquee news"><%= timeline.data_string %></div>
