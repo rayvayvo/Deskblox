@@ -24,9 +24,6 @@
 <% end %>
 <%# widget5 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget5_id).name %>
 <%# widget6 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget6_id).name %>
-<% render "news/onion_news" %>
-
-
 
 <div class='dashblox theme_<%= current_user.theme_id %>'>
 
@@ -55,6 +52,7 @@
   </div>
 </div>
 
+<% render "news/onion_news" %>
 
 
 
