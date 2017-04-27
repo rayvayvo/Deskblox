@@ -30,18 +30,21 @@
 
 .tweet_username {
   display: inline-block;
-  font-size: larger;
+  font-size: 1.2vw;
   color: aliceblue;
   margin: 0 0.5vw;
 }
 
 .tweet_handle {
   display: inline-block;
+  font-size: 0.9vw;
+  color: orangered;
 }
 
 .tweet_text {
-    color: aliceblue;
-    margin: 0px 4vw;
-    word-wrap: break-word;
-    padding: 0.5vw 0;
+  color: aliceblue;
+  margin: 0px 4vw;
+  word-wrap: break-word;
+  padding: 0.5vw 0;
+  font-size: 1vw;
 }
