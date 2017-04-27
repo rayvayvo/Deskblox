@@ -13,7 +13,6 @@ blocks page:
 
 settings page:
 //style
-//medium widget swapping
 //layout options***
 //back button to home page
 
