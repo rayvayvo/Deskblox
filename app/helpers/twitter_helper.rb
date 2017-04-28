@@ -10,6 +10,7 @@ module TwitterHelper
         possibly_sensitive: tweet.possibly_sensitive?,
         )
     end
+    clearOldTweets()
   end
 
   def getLatestTweets(number_of_tweets)
