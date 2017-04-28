@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170427160857) do
+ActiveRecord::Schema.define(version: 20170428155539) do
 
   create_table "settings", force: :cascade do |t|
     t.string   "user_id"
@@ -41,6 +41,15 @@ ActiveRecord::Schema.define(version: 20170427160857) do
     t.boolean  "possibly_sensitive"
     t.datetime "created_at",         null: false
     t.datetime "updated_at",         null: false
+  end
+
+  create_table "user_widget_settings", force: :cascade do |t|
+    t.string   "user_id"
+    t.string   "youtube_url"
+    t.string   "twitter_username"
+    t.string   "twitter_password"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "user_widgets", force: :cascade do |t|

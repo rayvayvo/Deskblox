@@ -11,55 +11,48 @@ end %>
 
 <% w2_name = []
   w2.each do |t|
-  w2_name.push [t.name, t.id]
+  w2_name.push [t.name.split("_").join(" "), t.id]
 end %>
 
 
+<section id="user_settings">
+
 <%= form_for @setting, :method => "put" do |f| %>
 
-<div>
-  Widget 1:
-          <%= f.select(:widget1_id) do %>
-            <%= options_for_select((w1_name), @setting.widget1_id) %>
-          <% end %>
-    </li>
-  </ul>
-  </div>
-</div><br><br>
+  <div>
+    Widget 1:
+            <%= f.select(:widget1_id) do %>
+              <%= options_for_select((w1_name), @setting.widget1_id) %>
+            <% end %>
+  </div><br><br>
 
-<div>
-  Widget 2:
-          <%= f.select(:widget2_id) do %>
-            <%= options_for_select((w1_name), @setting.widget2_id) %>
-          <% end %>
-    </li>
-  </ul>
-  </div>
-</div><br><br>
+  <div>
+    Widget 2:
+            <%= f.select(:widget2_id) do %>
+              <%= options_for_select((w1_name), @setting.widget2_id) %>
+            <% end %>
+  </div><br><br>
 
-<div>
-  Widget 3:
-          <%= f.select(:widget3_id) do %>
-            <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget3_id).last.name).last.id) %>
-          <% end %>
-    </li>
-  </ul>
-  </div>
-</div><br><br>
+  <div>
+    Widget 3:
+            <%= f.select(:widget3_id) do %>
+              <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget3_id).last.name).last.id) %>
+            <% end %>
+  </div><br><br>
 
-<div>
-  Widget 4:
-          <%= f.select(:widget4_id) do %>
-            <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget4_id).last.name).last.id) %>
-          <% end %>
-    </li>
-  </ul>
-  </div>
-</div><br><br>
+  <div>
+    Widget 4:
+            <%= f.select(:widget4_id) do %>
+              <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget4_id).last.name).last.id) %>
+            <% end %>
+  </div><br><br>
 
 
-  <%= f.submit "Save Changes" %>
-<% end %>
+    <%= f.submit "Save Changes" %>
     <%= button_to "Discard Changes", '/blocks', :method => "get" %>
 
-            <%= console %>
+  <% end %>
+  <br>
+</section>
+
+

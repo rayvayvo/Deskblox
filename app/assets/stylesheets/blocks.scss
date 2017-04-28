@@ -51,8 +51,8 @@
 #weather_title {
   border-bottom: 0.5vw solid;
   font-weight: 500;
-  width: 50%;
-  margin-left: 25%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 .weather_info {
@@ -172,7 +172,9 @@
 }
 
 
-#datetime.theme_1 {
+#datetime {
+  background-size: cover;
+  background-image: url(coolclock.jpeg)
 }
 
 #datetime.theme_2 {

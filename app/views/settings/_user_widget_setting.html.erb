@@ -1,0 +1,25 @@
+<% @widget_setting = UserWidgetSetting.where("user_id == ?", current_user.id).first %>
+
+<section id="user_widget_settings">
+
+<%= form_for @widget_setting, :method => "put" do |f| %>
+
+  <div id="ws_config">
+    Youtube Link:
+            <%= f.text_field(:youtube_url) %>
+  </div><br><br>
+
+  <div id="ws_config">
+    Twitter Username:
+            <%= f.text_field(:twitter_username) %>
+  </div><br><br>
+
+  <div id="ws_config">
+    Twitter Password:
+            <%= f.password_field(:twitter_password)%>
+  </div><br><br>
+    <%= f.submit "Save Changes" %>
+    <%= button_to "Discard Changes", '/blocks', :method => "get" %>
+  <% end %>
+  <br>
+</section>

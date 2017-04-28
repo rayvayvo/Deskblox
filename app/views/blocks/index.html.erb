@@ -13,6 +13,11 @@
         layout_id: 1
         ) end %>
 
+<% if !UserWidgetSetting.where("user_id == ?", current_user.id).first
+    UserWidgetSetting.create(
+      user_id: current_user.id
+    ) end %>
+
 
 <% widget1 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget1_id).name %>
 <% widget2 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget2_id).name %>

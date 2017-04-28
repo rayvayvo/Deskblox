@@ -12,12 +12,10 @@ blocks page:
 //data refresh timers
 
 settings page:
-//style
 //layout options***
-//back button to home page
+//hook user_widget_settings into the settings/widget objects
 
 widgets:
 //stocks
 //youtube
-//onion
-
+//twitter

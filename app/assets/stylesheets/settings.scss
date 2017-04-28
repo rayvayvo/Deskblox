@@ -1,0 +1,51 @@
+#settings_body {
+  background-color: black;
+  background-image: url(settings-wallpaper.jpg);
+  background-size: cover;
+}
+
+#user_settings {
+  margin-left: 33%;
+  width: 25%;
+  color: gold;
+  border: 1px solid ivory;
+  padding: 1em;
+}
+
+#settings_title {
+  font-size:  3em;
+  text-align: center;
+  margin-left: 35%;
+  border-bottom: 2px solid;
+  color: lightyellow;
+}
+
+#settings_body select {
+  color: black;
+}
+
+#settings_body input {
+  background-color: grey;
+}
+
+#widget_settings_title {
+  font-size:  2em;
+  text-align: center;
+  margin-left: 33%;
+  border-bottom: 2px solid;
+  color: lightyellow;
+  width: 25%;
+}
+
+#user_widget_settings {
+  margin-left: 33%;
+  width: 25%;
+  color: gold;
+  border: 1px solid ivory;
+  padding: 1em;
+}
+
+#ws_config input {
+  float: right;
+  background-color: ivory;
+}

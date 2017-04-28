@@ -1,5 +1,17 @@
+<body id="settings_body">
 <div>
-<h1>User Settings</h1>
+<strong id="settings_title">User Settings</strong>
 </div>
 
+<br>
+<div id="widget_settings_title">Display Settings</div>
+<br>
 <%= render :partial => 'setting', :object => Setting.where("user_id == ?", current_user.id) %>
+<br>
+
+<div id="widget_settings_title">Widget Settings</div>
+<br>
+
+<%= render :partial => 'user_widget_setting', :object => UserWidgetSetting.where("user_id == ?", current_user.id) %>
+
+</body>

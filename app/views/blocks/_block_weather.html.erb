@@ -1,6 +1,7 @@
 <div class="centered">
   <div id="weather_title">
-      <%= category['Headline']['Category'].capitalize %>
+    <% forecast = category['Headline']['Category'].capitalize %>
+    <%= forecast.split("_").join(" ") %>
   </div>
   <div class="weather_info">
     <div class="weather_key">High of:</div>

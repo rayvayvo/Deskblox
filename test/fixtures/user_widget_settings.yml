@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  youtube_url: MyString
+  twitter_username: MyString
+  twitter_password: MyString
+
+two:
+  user_id: MyString
+  youtube_url: MyString
+  twitter_username: MyString
+  twitter_password: MyString
