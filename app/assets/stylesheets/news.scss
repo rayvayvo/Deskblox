@@ -21,11 +21,20 @@
     100% { text-indent: -105em }
 }
 
-.news {
+.old_news {
   font-size: 5vw;
   color: aliceblue;
   position: relative;
   top: 50%;
   transform: translateY(-50%);
   margin: 0 1vw;
+}
+
+.news {
+  font-size: 5vw;
+  color: aliceblue;
+  position: static;
+  padding: 1vw;
+  margin: 0 1vw;
+  overflow: hidden
 }

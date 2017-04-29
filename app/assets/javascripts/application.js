@@ -14,7 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require jquery.marquee.min
 //= require_tree .
+
 function updateTime() {
   var myVar = setInterval(myTimer, 500);
 }
