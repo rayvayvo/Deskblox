@@ -1,4 +1,7 @@
 <% parse_timeline() %>
+<div class='tweets_header'>
+  <%= image_tag("twitter_logo.png", class: "twitter_branding") %>
+</div>
 <div class = 'tweets tweet_marquee'>
   <% tweets = getLatestTweets(20) %>
   <% tweets.each do | tweet | %>

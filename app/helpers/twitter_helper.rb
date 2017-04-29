@@ -10,6 +10,13 @@ module TwitterHelper
         possibly_sensitive: tweet.possibly_sensitive?,
         )
     end
+    Widget.create(
+      data_url: 'twitter.com',
+      data_source: 'twitter_timeline',
+      data_string: 'N/A',
+      size: "large",
+      name: "twitter"
+      )
     clearOldTweets()
   end
 
