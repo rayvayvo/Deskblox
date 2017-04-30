@@ -54,6 +54,7 @@
     <%= render "news/world_news" %>
   <% end %>
   </div>
+  <%= console %>
 </div>
 
 <% render "news/onion_news" %>
@@ -78,7 +79,7 @@
             <%= f.hidden_field(:email, :value => @user.email) %>
             <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
             <%= f.hidden_field(:theme_id, :value => 2) %>
-            <%= f.submit "" %><% end %></li>
+            <%= f.submit "White Mode" %><% end %></li>
 
             <li class="theme_picker" id="pick_theme_3"><%= form_for @user, :method => "put" do |f| %>
             <%= f.hidden_field(:email, :value => @user.email) %>
