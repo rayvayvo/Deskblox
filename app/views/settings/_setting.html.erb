@@ -1,12 +1,13 @@
-<% @setting = Setting.where("user_id == ?", current_user.id).first %>
-<% w1 = Widget.where("size == ?", "large") %>
+ <% @setting = Setting.where("user_id == ?", current_user.id).first %>
+<% w1 = Widget.where("size = 'large'").uniq.pluck(:name) %>
 <% w2 = []
     w2.push(Widget.where("data_source == ?", "local").last)
     w2.push(Widget.where("data_source == ?", "topstory").last)
     w2.push(Widget.where("data_source == ?", "onion").last) %>
 <% w1_name = []
   w1.each do |t|
-  w1_name.push [t.name, t.id]
+    id = Widget.where("name == ?", t).last.id
+  w1_name.push [t, id]
 end %>
 
 <% w2_name = []
