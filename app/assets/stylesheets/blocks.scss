@@ -10,7 +10,7 @@
 
 .base_block {
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 0.2vw;
   border-color: #1f2d42;
   background:#555;
   margin:1%;
@@ -35,6 +35,9 @@
   transform: translateY(-50%);
 }
 
+//
+// Date / time
+//
 #time {
   text-align: center;
   color: aliceblue;
@@ -46,6 +49,25 @@
   font-size: 2vw;
   color: darkcyan;
 }
+
+#datetime {
+}
+
+#datetime.theme_2 {
+  background-image: url(dayclock.jpeg);
+}
+
+#datetime.theme_3 {
+  background-image: url(nightclock.jpeg);
+}
+
+#datetime.theme_4 {
+  background-image: url(wackyclock.jpeg);
+}
+
+//
+//  Weather
+//
 
 #weather_title {
   border-bottom: 0.5vw solid;
@@ -122,9 +144,14 @@
   background-image: url(sleet.jpeg);
 }
 
+//
+//  Dropdown
+//
+
 #dropdownMenu2 {
-  background-color: aliceblue;
-  margin-left: 96%;
+  background-color: white;
+  float: right;
+  margin-right: 2vw;
 }
 
 #drop_down_div.dropup.theme_1{
@@ -139,7 +166,7 @@
 #theme_pick {
   margin-left: -8.29vw;
   margin-bottom: -3vw;
-  padding: 0px;
+  padding: 0vw;
 }
 
 .theme_picker {
@@ -148,8 +175,8 @@
 }
 
 #pick_theme_1 input{
-  background-color:#0b2856;
-  color: aliceblue;
+   background-color: white;
+  color: black;
   width: 100%;
 }
 
@@ -160,31 +187,17 @@
 }
 
 #pick_theme_3 input{
-  background-color: black;
-  color: gold;
+   background-color: white;
+  color: black;
   width: 100%;
 }
 
 #pick_theme_4 input{
-  background-color: pink;
+   background-color: white;
+  color: black;
   width: 100%;
 }
 
-
-#datetime {
-}
-
-#datetime.theme_2 {
-  background-image: url(dayclock.jpeg);
-}
-
-#datetime.theme_3 {
-  background-image: url(nightclock.jpeg);
-}
-
-#datetime.theme_4 {
-  background-image: url(wackyclock.jpeg);
-}
 
 .theme_2 {
   background-color: black;
