@@ -1,5 +1,5 @@
 module TwitterHelper
-  def parse_timeline()
+  def self.parse_timeline()
     timeline = $client.home_timeline()
     timeline.each do | tweet |
       Tweet.create(
@@ -20,11 +20,11 @@ module TwitterHelper
     clearOldTweets()
   end
 
-  def getLatestTweets(number_of_tweets)
+  def self.getLatestTweets(number_of_tweets)
     return Tweet.last(number_of_tweets)
   end
 
-  def clearOldTweets()
+  def self.clearOldTweets()
     Tweet.where("created_at < '#{1.days.ago}'").destroy_all
   end
 end
