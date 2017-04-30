@@ -26,6 +26,13 @@ Widget.create(
   size: "large"
 )
 
+NewsHelper.getHeadlines('local', 5)
+NewsHelper.getHeadlines('topstory', 5)
+NewsHelper.getHeadlines('onion', 5)
+
+TwitterHelper.parse_timeline()
+
+
 Setting.create(
   user_id: 1,
   widget1_id: 1,
