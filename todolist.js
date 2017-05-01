@@ -1,5 +1,4 @@
 home page:
-// fix font
 // add logic for password verification
 // add error logic for password verification fails
 
@@ -13,8 +12,8 @@ blocks page:
 //add logic so it doesnt do api requests every time I reload the page
 
 settings page:
-//layout options***
 //hook user_widget_settings into the settings/widget objects
+//more styling
 
 widgets:
 //stocks
