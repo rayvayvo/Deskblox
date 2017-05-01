@@ -15,10 +15,9 @@
 }
 
 #settings_title {
-  font-size:  3em;
+  font-size: 3vw;
   text-align: center;
-  margin-left: 40%;
-  border-bottom: 2px solid;
+  border-bottom: 0.2vw solid;
   color: lightyellow;
 }
 
@@ -30,7 +29,7 @@
   background-color: grey;
 }
 
-#widget_settings_title {
+.widget_settings_title {
   font-size:  2em;
   text-align: center;
   margin-left: 12.5%;
@@ -65,4 +64,40 @@
     margin-top: 1em;
     margin-right: 1em;
     color: gold;
+}
+
+
+
+// Layouts
+
+#layouts {
+  // border-style: solid;
+}
+
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.layout_button
+{
+  text-align: center;
+  color: firebrick;
+  font-size: 1.5vw;
+  padding-top: 0.5vw;
+}
+
+.layout_container {
+  display: block;
+  margin: 1vw 12vw;
+}
+
+.layout_option {
+  display: inline-block;
+}
+
+.layout_img {
+  width: 25vw;
+  padding: 0vw 1vw;
 }
