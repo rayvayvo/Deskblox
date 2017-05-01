@@ -1,10 +1,16 @@
 // Place all the styles related to the twitter controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.twitter_branding {
+  width: 13vw;
+  margin: 0 0 -1vw 2vw;
+}
+
 .tweets {
   margin: 1vw;
   border-style: solid;
-  height: 27.5vw;
+  height: 25.5vw;
   overflow: auto;
 }
 

@@ -13,36 +13,36 @@
       </div>
     </div>
   </header>
-  <content>
-    <div id="register_box">
-      <div class="register_inner">
-        <div class="register_content">
-          <div class="register_title">Sign-up!</div>
-          <%= form_for :user, url: '/users', class: 'register_form' do |form| %>
-            <div class="form-group">
-              <%= form.label :email %>
-              <%= form.text_field :email, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= form.label :password %>
-              <%= form.password_field :password, class: 'form-control' %>
-            </div>
-            <div class="form-group">
-              <%= form.label :password_confirmation %>
-              <%= form.password_field :password_confirmation, class: 'form-control' %>
-            </div>
-            <%= form.submit 'Create Account', class: 'btn_register' %>
-          <% end %>
+<content>
+  <div class= "demo_box">
+    <%= image_tag("demo_screen2.png", class: 'demo_img') %>
+  </div>
+  <div id="register_box">
+    <div class="register_inner">
+      <div class="register_title">New Users:</div>
+      <div class="register_content">
+        <%= form_for :user, url: '/users', class: 'register_form' do |form| %>
+          <div class="form-group">
+            <%= form.label :email %>
+            <%= form.text_field :email, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= form.label :password %>
+            <%= form.password_field :password, class: 'form-control' %>
+          </div>
+          <div class="form-group">
+            <%= form.label :password_confirmation %>
+            <%= form.password_field :password_confirmation, class: 'form-control' %>
+          </div>
+          <%= form.submit 'Create Account', class: 'btn_register' %>
+        <% end %>
         </div>
-            <% flash.each do |key, value| %>
-              <div class="alert alert-<%= key %>"><%= value %></div>
-            <% end %>
+        <% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+        <% end %>
       </div>
-    </div>
-  </content>
-  <footer id="landing_footer">
-
-  </footer>
+  </div>
+</content>
 </body>
 
 

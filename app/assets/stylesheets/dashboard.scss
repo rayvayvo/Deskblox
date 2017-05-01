@@ -3,12 +3,28 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import url('https://fonts.googleapis.com/css?family=Rationale');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500');
 
 #landing_body {
-  background-image: url("NASA_AB_4K.jpg");
+  background-image: url("NASA_AB_4K_90.jpg");
   background-repeat:no-repeat;
   background-size:cover;
   background-color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+content {
+  display: block;
+}
+
+.demo_box{
+  margin: 10vw 5vw;
+  display: inline-block;
+}
+
+.demo_img {
+  height: 40vw;
 }
 
 .centered {
@@ -19,7 +35,7 @@
 
 #landing_header {
   float: right;
-  background: black;
+  background: transparent;
   width: 100%;
   position: absolute;
   top: 0;
@@ -63,28 +79,36 @@
 #register_box {
   background: transparent;
   float: right;
-  margin-top: 25%;
-  padding-right: 10%;
+  margin-top: 16vw;
+  padding-right: 10vw;
   width: 44%;
   color: black;
   margin-right: 0.5vw;
+  display: inline-block;
 }
 .register_inner {
   border-style: solid;
-  border-radius: 7px;
+  border-width: 0.2vw;
+  border-radius: 0.5vw;
   padding: 1vw;
   background-color: grey;
   opacity: 0.9;
 }
 
 .register_title {
-  font-family: 'Rationale', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  color: #b12424;
+  font-weight: 500;
   font-size: 2vw;
-  margin-right: 2vw;
+  /* margin-right: 2vw; */
+  margin-bottom: 1vw;
+  border-bottom-style: solid;
+  border-bottom-color: white;
 }
 
 .register_content {
-  font-family: 'Rationale', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
   color: white;
   font-size: 1.5vw;
   opacity: 1;
@@ -117,13 +141,13 @@
 }
 
 div.alert.alert-error {
-color: white;
-background-color: darkred;
-width: 50%;
-float: right;
-height: 2em;
-line-height: 0em;
-position: relative;
-top: -2em;
-text-align: center;
+  color: white;
+  background-color: darkred;
+  width: 50%;
+  float: right;
+  height: 2em;
+  line-height: 0em;
+  position: relative;
+  top: -2em;
+  text-align: center;
 }
