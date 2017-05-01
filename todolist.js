@@ -10,6 +10,7 @@ blocks page:
 //news style
 //news length/marquee
 //data refresh timers
+//add logic so it doesnt do api requests every time I reload the page
 
 settings page:
 //layout options***
@@ -19,3 +20,4 @@ widgets:
 //stocks
 //youtube
 //twitter
+//hash the URLS that contain the apikeys

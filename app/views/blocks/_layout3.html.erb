@@ -1,0 +1,28 @@
+<div class='dashblox theme_<%= current_user.theme_id %>'>
+
+ <div class="twelve_x_two theme_<%= current_user.theme_id%>">
+
+    <% if widget3 %>
+      <%= render :partial => "news/#{widget3}", :locals => {:espn_sports => espn_sports} %>
+    <% else %>
+      <%= render "news/local_news" %>
+    <% end %>
+    </div>
+
+   <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget1 %>" >
+      <%= render :partial => "block_#{widget1}", :locals => {:category => category} %>
+    </div>
+
+    <div class="six_x_six theme_<%= current_user.theme_id%> <%= category['Headline']['Category'] %>" id="<%= widget2 %>">
+      <%= render :partial => "block_#{widget2}", :locals => {:category => category} %>
+    </div>
+
+  <div class="twelve_x_two theme_<%= current_user.theme_id%>">
+    <% if widget4 %>
+      <%= render :partial => "news/#{widget4}", :locals => {:espn_sports => espn_sports} %>
+      <% else %>
+      <%= render "news/world_news" %>
+    <% end %>
+    </div>
+
+  </div>

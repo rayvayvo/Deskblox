@@ -7,6 +7,8 @@ module NewsHelper
       when 'onion'  then 'http://www.theonion.com/feeds/rss'
       else ''
     end
+
+
     feed = Feedjira::Feed.fetch_and_parse feed_url
     all_items = feed.entries[0,number_articles]
     all_items.each do | story |
@@ -19,9 +21,13 @@ module NewsHelper
       size: "medium",
       name: "#{feed_type}_news"
       )
+
   end
+
+
 
   def self.clearOldNews()
     Widget.where("data_source = 'local' OR data_source = 'topstory' AND created_at < '#{1.days.ago}'").destroy_all
   end
 end
+

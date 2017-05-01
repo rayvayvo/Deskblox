@@ -3,7 +3,10 @@
 <% w2 = []
     w2.push(Widget.where("data_source == ?", "local").last)
     w2.push(Widget.where("data_source == ?", "topstory").last)
+    w2.push(Widget.where("data_source == ?", "espn").last)
     w2.push(Widget.where("data_source == ?", "onion").last) %>
+
+
 <% w1_name = []
   w1.each do |t|
     id = Widget.where("name == ?", t).last.id
@@ -48,9 +51,14 @@ end %>
             <% end %>
   </div><br><br>
 
+<div>
+    Layout:
+            <%= f.select(:layout_id) do %>
+              <%= options_for_select([["Layout 1", 1],["Layout 2", 2],["Layout 3", 3]]) %>
+            <% end %>
+  </div><br><br>
 
     <%= f.submit "Save Changes" %>
-    <%= button_to "Discard Changes", '/blocks', :method => "get" %>
 
   <% end %>
   <br>

@@ -13,5 +13,6 @@
 <br>
 
 <%= render :partial => 'user_widget_setting', :object => UserWidgetSetting.where("user_id == ?", current_user.id) %>
+<%= button_to "Back", '/blocks', :method => "get" %>
 
 </body>

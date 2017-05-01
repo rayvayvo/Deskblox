@@ -26,11 +26,17 @@ Widget.create(
   size: "large"
 )
 
+Widget.create(
+  data_url: "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=3ef08f6c61e14ec4a3f12d311c022f43",
+  data_source: 'espn',
+  name: "espn_news",
+  size: "medium"
+)
 NewsHelper.getHeadlines('local', 5)
 NewsHelper.getHeadlines('topstory', 5)
 NewsHelper.getHeadlines('onion', 5)
 
-TwitterHelper.parse_timeline()
+# TwitterHelper.parse_timeline()
 
 
 Setting.create(
