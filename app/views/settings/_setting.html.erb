@@ -1,4 +1,4 @@
- <% @setting = Setting.where("user_id == ?", current_user.id).first %>
+<% @setting = Setting.where("user_id == ?", current_user.id).first %>
 <% w1 = Widget.where("size = 'large'").uniq.pluck(:name) %>
 <% w2 = []
     w2.push(Widget.where("data_source == ?", "local").last)
@@ -47,13 +47,6 @@ end %>
     Widget 4:
             <%= f.select(:widget4_id) do %>
               <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget4_id).last.name).last.id) %>
-            <% end %>
-  </div><br><br>
-
-<div>
-    Layout:
-            <%= f.select(:layout_id) do %>
-              <%= options_for_select([["Layout 1", 1],["Layout 2", 2],["Layout 3", 3]]) %>
             <% end %>
   </div><br><br>
 
