@@ -4,29 +4,11 @@
   background-size: cover;
 }
 
-#user_settings {
-  margin-left: 25%;
-  width: 25%;
-  color: gold;
-  border: 1px solid ivory;
-  padding: 1em;
-  margin-right: 0;
-  float: left;
-}
-
 #settings_title {
   font-size: 3vw;
-  text-align: center;
-  border-bottom: 0.2vw solid;
   color: lightyellow;
-}
-
-#settings_body select {
-  color: black;
-}
-
-#settings_body input {
-  background-color: grey;
+  display: inline-block;
+  padding-left: 4vw;
 }
 
 .widget_settings_title {
@@ -35,34 +17,6 @@
   border-bottom: 0.1vw solid;
   color: lightyellow;
   width: 75vw;
-}
-
-#user_widget_settings {
-  margin-left: 50%;
-  width: 25%;
-  color: gold;
-  border: 1px solid ivory;
-  padding: 1em;
-}
-
-#ws_config input {
-  float: right;
-  background-color: ivory;
-}
-
-#back_button {
-  border: 1px solid ivory;
-  height: 4em;
-    width: 25%;
-    float: right;
-    margin-right: 25%;
-}
-
-#back_button input {
-      float: right;
-    margin-top: 1em;
-    margin-right: 1em;
-    color: gold;
 }
 
 .widgets_container {
@@ -86,6 +40,21 @@
   padding: 1vw;
   font-size: 1.5vw;
 }
+
+.fake_header {
+  display: block;
+  border-bottom: 0.2vw solid;
+  color: cornsilk;
+}
+
+.link_back {
+  display: inline-block;
+  float: right;
+  color: aliceblue;
+  padding: 0.7vw 4vw;
+  font-size: 2vw;
+}
+
 
 // Layouts
 
