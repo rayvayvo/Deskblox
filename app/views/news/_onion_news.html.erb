@@ -1,4 +1,4 @@
-<% getHeadlines('onion', 5) %>
+<% NewsHelper.getHeadlines('onion', 5) %>
 <% news_blob = Widget.where(["data_source = ?", 'onion']).last %>
 <div class="onion_news_marquee news"><%= news_blob.data_string %></div>
 

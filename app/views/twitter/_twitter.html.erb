@@ -1,9 +1,9 @@
-<% parse_timeline() %>
+<% TwitterHelper.parse_timeline() %>
 <div class='tweets_header'>
   <%= image_tag("twitter_logo.png", class: "twitter_branding") %>
 </div>
 <div class = 'tweets tweet_marquee'>
-  <% tweets = getLatestTweets(20) %>
+  <% tweets = TwitterHelper.getLatestTweets(20) %>
   <% tweets.each do | tweet | %>
     <% if not tweet.possibly_sensitive %>
       <div class = 'tweet'>

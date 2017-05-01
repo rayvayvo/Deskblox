@@ -1,5 +1,5 @@
 module NewsHelper
-  def getHeadlines(feed_type, number_articles)
+  def self.getHeadlines(feed_type, number_articles)
     storyfeed =''
     feed_url = case feed_type
       when 'local' then 'http://www.thestar.com/feeds.articles.news.rss'
@@ -26,7 +26,7 @@ module NewsHelper
 
 
 
-  def clearOldNews()
+  def self.clearOldNews()
     Widget.where("data_source = 'local' OR data_source = 'topstory' AND created_at < '#{1.days.ago}'").destroy_all
   end
 end

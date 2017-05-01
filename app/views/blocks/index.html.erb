@@ -2,10 +2,6 @@
 <% espn_sports = load_espn %>
 <% @user = @current_user %>
 
-<% getHeadlines('local', 5) %>
-<% getHeadlines('topstory', 5) %>
-<% getHeadlines('onion', 5) %>
-
 
 <% if !Setting.where("user_id == ?", current_user.id).first
   Setting.create(
@@ -38,10 +34,11 @@
 
 <% current_layout = Setting.where("user_id == ?", current_user.id).first.layout_id %>
   <%= render :partial => "layout#{current_layout}", locals: {espn_sports: espn_sports, category: category, widget1: widget1, widget2: widget2, widget3: widget3, widget4: widget4} %>
+<div class='dashblox theme_<%= current_user.theme_id %>'>
 
 <div class="dropup theme_<%= current_user.theme_id%>" id="drop_down_div">
   <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <span class="caret"></span>
+    <span class="glyphicon glyphicon-wrench" aria-hidden="true"></span>
   </button>
   <ul class="dropdown-menu dropdown-menu-right" id="settings1" aria-labelledby="dropdownMenu2">
     <li><a href="/settings">settings</a></li>
@@ -53,19 +50,19 @@
             <%= f.hidden_field(:email, :value => @user.email) %>
             <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
             <%= f.hidden_field(:theme_id, :value => 1) %>
-            <%= f.submit "Coolblue" %><% end %></li>
+            <%= f.submit "Default" %><% end %></li>
 
             <li class="theme_picker" id="pick_theme_2"><%= form_for @user, :method => "put" do |f| %>
             <%= f.hidden_field(:email, :value => @user.email) %>
             <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
             <%= f.hidden_field(:theme_id, :value => 2) %>
-            <%= f.submit "Whiteout" %><% end %></li>
+            <%= f.submit "White Mode" %><% end %></li>
 
             <li class="theme_picker" id="pick_theme_3"><%= form_for @user, :method => "put" do |f| %>
             <%= f.hidden_field(:email, :value => @user.email) %>
             <%= f.hidden_field(:password_digest, :value => @user.password_digest) %>
             <%= f.hidden_field(:theme_id, :value => 3) %>
-            <%= f.submit "Night Sky" %><% end %></li>
+            <%= f.submit "Dark Mode" %><% end %></li>
 
             <li class="theme_picker" id="pick_theme_4"><%= form_for @user, :method => "put" do |f| %>
             <%= f.hidden_field(:email, :value => @user.email) %>
