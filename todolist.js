@@ -10,6 +10,7 @@ blocks page:
 //news style
 //news length/marquee
 //data refresh timers
+//add logic so it doesnt do api requests every time I reload the page
 
 settings page:
 //layout options***

@@ -52,6 +52,10 @@ def type_check
   end
 end
 
+def load_espn
+    espn_news = HTTP.get("https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=3ef08f6c61e14ec4a3f12d311c022f43").parse
+end
+
    def theme_1
     User.where(["email = ?" , current_user.email]).first.theme_id = 1
   end

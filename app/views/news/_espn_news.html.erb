@@ -1,0 +1,6 @@
+
+<% espn_headlines = ""
+  espn_sports['articles'].each do |e|
+    espn_headlines += " | " + "#{e['description']}"
+    end %>
+<div class="marquee news"><%= espn_headlines %></div>

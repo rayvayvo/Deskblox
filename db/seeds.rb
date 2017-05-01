@@ -26,6 +26,13 @@ Widget.create(
   size: "large"
 )
 
+Widget.create(
+  data_url: "https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=3ef08f6c61e14ec4a3f12d311c022f43",
+  data_source: 'espn',
+  name: "espn_news",
+  size: "medium"
+)
+
 Setting.create(
   user_id: 1,
   widget1_id: 1,

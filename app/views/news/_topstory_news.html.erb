@@ -1,3 +1,2 @@
-<% getHeadlines('topstory', 5) %>
 <% news_blob = Widget.where(["data_source = ?", 'topstory']).last %>
 <div class="marquee news"><%= news_blob.data_string %></div>
