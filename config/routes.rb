@@ -16,6 +16,9 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
+  get '/users' => 'blocks#index'
+  get '/weather' => 'blocks#index'
+  get '/news' => 'blocks#index'
 
 
   resources :users
