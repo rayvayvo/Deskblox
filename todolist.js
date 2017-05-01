@@ -20,3 +20,4 @@ widgets:
 //stocks
 //youtube
 //twitter
+//hash the URLS that contain the apikeys
