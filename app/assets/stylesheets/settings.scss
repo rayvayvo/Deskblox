@@ -5,17 +5,19 @@
 }
 
 #user_settings {
-  margin-left: 33%;
+  margin-left: 25%;
   width: 25%;
   color: gold;
   border: 1px solid ivory;
   padding: 1em;
+  margin-right: 0;
+  float: left;
 }
 
 #settings_title {
   font-size:  3em;
   text-align: center;
-  margin-left: 35%;
+  margin-left: 40%;
   border-bottom: 2px solid;
   color: lightyellow;
 }
@@ -31,14 +33,14 @@
 #widget_settings_title {
   font-size:  2em;
   text-align: center;
-  margin-left: 33%;
+  margin-left: 12.5%;
   border-bottom: 2px solid;
   color: lightyellow;
-  width: 25%;
+  width: 75%;
 }
 
 #user_widget_settings {
-  margin-left: 33%;
+  margin-left: 50%;
   width: 25%;
   color: gold;
   border: 1px solid ivory;
@@ -48,4 +50,19 @@
 #ws_config input {
   float: right;
   background-color: ivory;
+}
+
+#back_button {
+  border: 1px solid ivory;
+  height: 4em;
+    width: 25%;
+    float: right;
+    margin-right: 25%;
+}
+
+#back_button input {
+      float: right;
+    margin-top: 1em;
+    margin-right: 1em;
+    color: gold;
 }

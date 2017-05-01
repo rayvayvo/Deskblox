@@ -1,6 +1,5 @@
 <% @widget_setting = UserWidgetSetting.where("user_id == ?", current_user.id).first %>
 
-<section id="user_widget_settings">
 
 <%= form_for @widget_setting, :method => "put" do |f| %>
 
@@ -20,5 +19,4 @@
   </div><br><br>
     <%= f.submit "Save Changes" %>
   <% end %>
-  <br>
-</section>
+
