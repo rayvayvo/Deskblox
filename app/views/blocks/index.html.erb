@@ -3,7 +3,6 @@
 <% stocks = load_stocks %>
 <% @user = @current_user %>
 
-<%= console %>
 
 <% if !Setting.where("user_id == ?", current_user.id).first
   Setting.create(

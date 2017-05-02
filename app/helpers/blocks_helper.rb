@@ -57,8 +57,16 @@ def load_espn
 end
 
 def load_stocks
-    stocks = HTTP.get("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT+gc=f+si=f+eurusd=x+^gspc+cl=f&f=nabp2")
-    stocks.fifth
+    new_stocks = HTTP.get("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT+gc=f+si=f+eurusd=x+^gspc+cl=f&f=nabp2")
+    raw_stocks = new_stocks.body.readpartial
+    stock_stream = raw_stocks.split("%")
+    final_stream = ""
+
+    stock_stream.each do |s|
+    ss = s.dump.split("n\\").join.split("\\").join.split("\"").join.split(",")
+    final_stream += "#{ss[0].capitalize} ask: #{ss[1]}, buy: #{ss[2]}, varied: #{ss[3]}% • "
+    end
+      return final_stream
 end
 
    def theme_1
