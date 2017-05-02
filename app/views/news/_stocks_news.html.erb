@@ -1,11 +1,9 @@
-<% stocks_values = ""
-  stocks['articles'].each do |e|
-    stocks_values += " • " + "#{e['description']}"
-    end %>
-<div class="espn_news_marquee news"><%= stocks_news %></div>
+
+<div class="stocks_news_marquee news"><%= stocks %></div>
 
 <script type="text/javascript">
-  $('.espn_news_marquee').marquee({
+  $('.stocks_news_marquee').marquee({
+
       //speed in milliseconds of the marquee
       duration: 10000,
       //gap in pixels between the tickers

@@ -4,7 +4,9 @@
     w2.push(Widget.where("data_source == ?", "local").last)
     w2.push(Widget.where("data_source == ?", "topstory").last)
     w2.push(Widget.where("data_source == ?", "espn").last)
-    w2.push(Widget.where("data_source == ?", "onion").last) %>
+    w2.push(Widget.where("data_source == ?", "onion").last)
+    w2.push(Widget.where("data_source == ?", "stocks").last) %>
+%>
 
 
 <% w1_name = []

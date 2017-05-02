@@ -11,7 +11,6 @@ settings page:
 //hook user_widget_settings into the settings/widget objects
 
 widgets:
-//stocks
 //youtube
 //twitter
 
@@ -19,11 +18,7 @@ widgets:
 
 bug fixes:
 
-routes:
-//double check for any dead/unwanted routes
-
-blocks page:
-//add logic so it doesnt do api requests every time I reload the page
+bug-fix
 
 widgets:
 //hash the URLS that contain the apikeys

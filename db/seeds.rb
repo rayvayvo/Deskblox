@@ -32,6 +32,14 @@ Widget.create(
   name: "espn_news",
   size: "medium"
 )
+
+Widget.create(
+  data_url: "http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT+gc=f+si=f+eurusd=x+^gspc+cl=f&f=nabp2",
+  data_source: 'stocks',
+  name: "stocks_news",
+  size: "medium"
+)
+
 NewsHelper.getHeadlines('local', 5)
 NewsHelper.getHeadlines('topstory', 5)
 NewsHelper.getHeadlines('onion', 5)
