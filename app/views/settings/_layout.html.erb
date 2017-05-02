@@ -1,0 +1,96 @@
+<% @setting = Setting.where("user_id == ?", current_user.id).last %>
+<% w1 = Widget.where("size = 'large'").uniq.pluck(:name) %>
+<% w2 = []
+    w2.push(Widget.where("data_source == ?", "local").last)
+    w2.push(Widget.where("data_source == ?", "topstory").last)
+    w2.push(Widget.where("data_source == ?", "espn").last)
+    w2.push(Widget.where("data_source == ?", "onion").last) %>
+
+
+<% w1_name = []
+  w1.each do |t|
+    id = Widget.where("name == ?", t).last.id
+  w1_name.push [t, id]
+end %>
+
+<% w2_name = []
+  w2.each do |t|
+  w2_name.push [t.name.split("_").join(" "), t.id]
+end %>
+
+<div class="widget_settings_title">Layout Options</div>
+<%= form_for @setting, :method => "put" do |f| %>
+  <div class="layout_container">
+    <table>
+      <tr>
+        <td>
+          <div class="layout_option">
+            <%= image_tag("layouts_1.png", class: "layout_img") %>
+          </div>
+        </td>
+        <td>
+          <div class="layout_option">
+            <%= image_tag("layouts_2.png", class: "layout_img") %>
+          </div>
+        </td>
+        <td>
+          <div class="layout_option">
+            <%= image_tag("layouts_3.png", class: "layout_img") %>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td class="layout_button">
+          <%= f.radio_button :layout_id, 1 %>
+          <%= f.label :layout_id, 'Layout 1', :value => 'layout_id' %>
+        </td>
+        <td class="layout_button">
+          <%= f.radio_button :layout_id, 2 %>
+          <%= f.label :layout_id, 'Layout 2', :value => 'layout_id' %>
+        </td>
+        <td class="layout_button">
+          <%= f.radio_button :layout_id, 3 %>
+          <%= f.label :layout_id, 'Layout 3', :value => 'layout_id' %>
+        </td>
+      </tr>
+    </table>
+  </div>
+<div class="widget_settings_title">Widget Settings</div>
+  <div class="widgets_container">
+    <table class="widgets_table">
+      <tr>
+        <td class="widgets_key">Widget 1:<td>
+        <td class="widgets_value">
+          <%= f.select(:widget1_id) do %>
+            <%= options_for_select((w1_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget1_id).last.name).last.id) %>
+          <% end %>
+        </td>
+
+        <td class="widgets_key">Widget 2:<td>
+        <td class="widgets_value">
+          <%= f.select(:widget2_id) do %>
+            <%= options_for_select((w1_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget2_id).last.name).last.id) %>
+          <% end %>
+        </td>
+      </tr>
+      <tr>
+        <td class="widgets_key">Widget 3:<td>
+        <td class="widgets_value">
+          <%= f.select(:widget3_id) do %>
+            <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget3_id).last.name).last.id) %>
+          <% end %>
+        </td>
+
+        <td class="widgets_key">Widget 4:<td>
+        <td class="widgets_value">
+          <%= f.select(:widget4_id) do %>
+            <%= options_for_select((w2_name), Widget.where("name == ?", Widget.where("id == ?" , @setting.widget4_id).last.name).last.id) %>
+          <% end %>
+        </td>
+      </tr>
+    </table>
+    <div class="layout_update_button">
+      <%= f.submit "Update Layout" %>
+    </div>
+  <% end %>
+</div>
