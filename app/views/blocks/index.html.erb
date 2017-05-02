@@ -4,7 +4,7 @@
 <% @user = @current_user %>
 
 
-<% if !Setting.where("user_id == ?", current_user.id).first
+<% if !Setting.where("user_id == ?", current_user.id).last
   Setting.create(
         user_id: current_user.id,
         widget1_id: 1,
@@ -16,25 +16,21 @@
         layout_id: 1
         ) end %>
 
-<% if !UserWidgetSetting.where("user_id == ?", current_user.id).first
+<% if !UserWidgetSetting.where("user_id == ?", current_user.id).last
     UserWidgetSetting.create(
       user_id: current_user.id,
-      youtube_url: '_OBlgSz8sSM'
+      youtube_url: 'IbC9FPzo0_c'
     ) end %>
 
 
-<% widget1 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget1_id).name %>
-<% widget2 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget2_id).name %>
-<% if Widget.last.size == "medium" %>
-  <% widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget3_id).name %>
-<% end %>
-<% if Widget.last(2)[0].size == "medium" %>
-  <% widget4 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget4_id).name %>
-<% end %>
+<% widget1 = Widget.find(Setting.where("user_id == ?", current_user.id).last.widget1_id).name %>
+<% widget2 = Widget.find(Setting.where("user_id == ?", current_user.id).last.widget2_id).name %>
+<% widget3 = Widget.find(Setting.where("user_id == ?", current_user.id).last.widget3_id).name %>
+<% widget4 = Widget.find(Setting.where("user_id == ?", current_user.id).last.widget4_id).name %>
 <%# widget5 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget5_id).name %>
 <%# widget6 = Widget.find(Setting.where("user_id == ?", current_user.id).first.widget6_id).name %>
 
-<% current_layout = Setting.where("user_id == ?", current_user.id).first.layout_id %>
+<% current_layout = Setting.where("user_id == ?", current_user.id).last.layout_id %>
   <%= render :partial => "layout#{current_layout}", locals: {espn_sports: espn_sports, category: category, widget1: widget1, widget2: widget2, widget3: widget3, widget4: widget4, stocks: stocks} %>
 
 <div class="dropup theme_<%= current_user.theme_id%>" id="drop_down_div">
