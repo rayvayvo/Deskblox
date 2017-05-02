@@ -6,16 +6,6 @@
     </div>
   </div>
   <%= render "layout" %>
+  <%= render :partial => 'user_widget_setting', :object => UserWidgetSetting.where("user_id == ?", current_user.id) %>
 
-<!-- <section id="user_settings">
-<div id="widget_settings_title">Display Settings</div>
-<br>
-<%#= render "setting" %>
-</section> -->
-
-<!-- <section id="user_widget_settings">
-<div id="widget_settings_title">Widget Settings</div>
-<br>
-<%#= render :partial => 'user_widget_setting', :object => UserWidgetSetting.where("user_id == ?", current_user.id) %>
-</section> -->
 </body>
