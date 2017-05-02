@@ -56,6 +56,19 @@ def load_espn
     espn_news = HTTP.get("https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=3ef08f6c61e14ec4a3f12d311c022f43").parse
 end
 
+def load_stocks
+    new_stocks = HTTP.get("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT+gc=f+si=f+eurusd=x+^gspc+cl=f&f=nabp2")
+    raw_stocks = new_stocks.body.readpartial
+    stock_stream = raw_stocks.split("%")
+    final_stream = ""
+
+    stock_stream.each do |s|
+    ss = s.dump.split("n\\").join.split("\\").join.split("\"").join.split(",")
+    final_stream += "#{ss[0]} | ask: #{ss[1]} | buy: #{ss[2]} | varied: #{ss[3]}% | • "
+    end
+      return final_stream
+end
+
    def theme_1
     User.where(["email = ?" , current_user.email]).first.theme_id = 1
   end

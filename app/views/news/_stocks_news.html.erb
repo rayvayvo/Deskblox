@@ -1,9 +1,9 @@
-<% NewsHelper.getHeadlines('topstory', 10) %>
-<% news_blob = Widget.where(["data_source = ?", 'topstory']).last %>
-<div class="topstory_news_marquee news"><%= news_blob.data_string %></div>
+
+<div class="stocks_news_marquee news"><%= stocks %></div>
 
 <script type="text/javascript">
-  $('.topstory_news_marquee').marquee({
+  $('.stocks_news_marquee').marquee({
+
       //speed in milliseconds of the marquee
       duration: 10000,
       //gap in pixels between the tickers
