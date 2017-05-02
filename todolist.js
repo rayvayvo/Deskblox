@@ -11,16 +11,13 @@ settings page:
 //hook user_widget_settings into the settings/widget objects
 
 widgets:
-//stocks
+//stocks is a bitch and nobody since 2015 wants to give this info for free
 //youtube
 //twitter
 
 ==============================================================
 
 bug fixes:
-
-routes:
-//double check for any dead/unwanted routes
 
 blocks page:
 //add logic so it doesnt do api requests every time I reload the page

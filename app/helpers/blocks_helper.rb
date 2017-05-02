@@ -56,6 +56,11 @@ def load_espn
     espn_news = HTTP.get("https://newsapi.org/v1/articles?source=espn&sortBy=top&apiKey=3ef08f6c61e14ec4a3f12d311c022f43").parse
 end
 
+def load_stocks
+    stocks = HTTP.get("http://download.finance.yahoo.com/d/quotes.csv?s=AAPL+GOOG+MSFT+gc=f+si=f+eurusd=x+^gspc+cl=f&f=nabp2")
+    stocks.fifth
+end
+
    def theme_1
     User.where(["email = ?" , current_user.email]).first.theme_id = 1
   end
