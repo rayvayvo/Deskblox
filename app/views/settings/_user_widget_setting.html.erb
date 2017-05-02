@@ -5,16 +5,8 @@
   <%= form_for @widget_setting, :method => "put" do |f| %>
     <table class="widgets_table">
       <tr>
-      <td class="widgets_key">Youtube Link:</td>
+      <td class="widgets_key">YouTube id:</td>
       <td class="widgets_value"><%= f.text_field(:youtube_url) %></td>
-      </tr>
-      <tr>
-      <td class="widgets_key">Twitter Username:</td>
-      <td class="widgets_value"><%= f.text_field(:twitter_username) %></td>
-      </tr>
-      <tr>
-      <td class="widgets_key">Twitter Password:</td>
-      <td class="widgets_value"><%= f.password_field(:twitter_password)%></td>
       </tr>
     </table>
     <div class="layout_update_button">
