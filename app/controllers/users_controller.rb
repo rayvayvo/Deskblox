@@ -26,15 +26,25 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    if User.where("email == ?", params[:user][:email]).first
-      flash[:error] = "Email already in use"
-      redirect_to "/"
-    else
-      user = User.new(user_params)
-      if user.save
-        session[:user_id] = user.id
-        redirect_to '/blocks'
+    if params[:user][:password].length > 5
+      if params[:user][:password] == params[:user][:password_confirmation]
+        if User.where("email == ?", params[:user][:email]).first
+          flash[:error] = "Email already in use"
+          redirect_to "/"
+        else
+          user = User.new(user_params)
+          if user.save
+            session[:user_id] = user.id
+            redirect_to '/blocks'
+          end
+        end
+      else
+          flash[:error] = "Passwords do not match"
+          redirect_to "/"
       end
+    else
+      flash[:error] = "Password is too short"
+      redirect_to "/"
     end
   end
 

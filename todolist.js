@@ -19,11 +19,6 @@ widgets:
 
 bug fixes:
 
-home page:
-// add logic for password verification
-// add error logic for password verification fails
-//passwords not matching needs flash message and page reload
-
 routes:
 //double check for any dead/unwanted routes
 
