@@ -1,23 +1,11 @@
 <body id="settings_body">
-<div>
-<strong id="settings_title">User Settings</strong>
-</div>
-<br>
+  <div class='fake_header'>
+    <div id="settings_title">User Settings</div>
+    <div class="link_back">
+      <%= link_to "Back", '/blocks', :method => "get" %>
+    </div>
+  </div>
+  <%= render "layout" %>
+  <%= render :partial => 'user_widget_setting', :object => UserWidgetSetting.where("user_id == ?", current_user.id) %>
 
-
-<section id="user_settings">
-<div id="widget_settings_title">Display Settings</div>
-<br>
-<%= render :partial => 'setting', :object => Setting.where("user_id == ?", current_user.id) %>
-</section>
-
-<section id="user_widget_settings">
-<div id="widget_settings_title">Widget Settings</div>
-<br>
-<%= render :partial => 'user_widget_setting', :object => UserWidgetSetting.where("user_id == ?", current_user.id) %>
-</section>
-
-<section id="back_button">
-<%= button_to "Back", '/blocks', :method => "get" %>
-</section>
 </body>

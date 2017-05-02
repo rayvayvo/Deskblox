@@ -4,65 +4,90 @@
   background-size: cover;
 }
 
-#user_settings {
-  margin-left: 25%;
-  width: 25%;
-  color: gold;
-  border: 1px solid ivory;
-  padding: 1em;
-  margin-right: 0;
-  float: left;
-}
-
 #settings_title {
-  font-size:  3em;
-  text-align: center;
-  margin-left: 40%;
-  border-bottom: 2px solid;
+  font-size: 3vw;
   color: lightyellow;
+  display: inline-block;
+  padding-left: 4vw;
 }
 
-#settings_body select {
-  color: black;
-}
-
-#settings_body input {
-  background-color: grey;
-}
-
-#widget_settings_title {
-  font-size:  2em;
-  text-align: center;
-  margin-left: 12.5%;
-  border-bottom: 2px solid;
+.widget_settings_title {
+  font-size: 2vw;
+  margin-left: 12vw;
+  border-bottom: 0.1vw solid;
   color: lightyellow;
-  width: 75%;
+  width: 75vw;
 }
 
-#user_widget_settings {
-  margin-left: 50%;
-  width: 25%;
-  color: gold;
-  border: 1px solid ivory;
-  padding: 1em;
+.widgets_container {
+  display: block;
+  margin: 1vw 12vw;
 }
 
-#ws_config input {
+.widgets_table {
+  border-style: solid;
+  background: black;
+  margin: 0vw auto;
+}
+
+.widgets_key {
+  padding: 1vw;
+  color: aliceblue;
+  font-size: 1.5vw;
+}
+
+.widgets_value {
+  padding: 1vw;
+  font-size: 1.5vw;
+}
+
+.fake_header {
+  display: block;
+  border-bottom: 0.2vw solid;
+  color: cornsilk;
+}
+
+.link_back {
+  display: inline-block;
   float: right;
-  background-color: ivory;
+  color: aliceblue;
+  padding: 0.7vw 4vw;
+  font-size: 2vw;
 }
 
-#back_button {
-  border: 1px solid ivory;
-  height: 4em;
-    width: 25%;
-    float: right;
-    margin-right: 25%;
+
+// Layouts
+
+.centered {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-#back_button input {
-      float: right;
-    margin-top: 1em;
-    margin-right: 1em;
-    color: gold;
+.layout_button
+{
+  text-align: center;
+  color: firebrick;
+  font-size: 1.5vw;
+  padding-top: 0.5vw;
+}
+
+.layout_container {
+  display: block;
+  margin: 1vw 12vw;
+}
+
+.layout_option {
+  display: inline-block;
+}
+
+.layout_img {
+  width: 25vw;
+  padding: 0vw 1vw;
+}
+
+.layout_update_button {
+  padding: 1vw;
+  font-size: 1.5vw;
+  margin-left: 32vw;
 }

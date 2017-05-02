@@ -1,22 +1,24 @@
 <% @widget_setting = UserWidgetSetting.where("user_id == ?", current_user.id).first %>
 
-
-<%= form_for @widget_setting, :method => "put" do |f| %>
-
-  <div id="ws_config">
-    Youtube Link:
-            <%= f.text_field(:youtube_url) %>
-  </div><br><br>
-
-  <div id="ws_config">
-    Twitter Username:
-            <%= f.text_field(:twitter_username) %>
-  </div><br><br>
-
-  <div id="ws_config">
-    Twitter Password:
-            <%= f.password_field(:twitter_password)%>
-  </div><br><br>
-    <%= f.submit "Save Changes" %>
+<div class="widget_settings_title">Widget Accounts</div>
+<div class="widgets_container">
+  <%= form_for @widget_setting, :method => "put" do |f| %>
+    <table class="widgets_table">
+      <tr>
+      <td class="widgets_key">Youtube Link:</td>
+      <td class="widgets_value"><%= f.text_field(:youtube_url) %></td>
+      </tr>
+      <tr>
+      <td class="widgets_key">Twitter Username:</td>
+      <td class="widgets_value"><%= f.text_field(:twitter_username) %></td>
+      </tr>
+      <tr>
+      <td class="widgets_key">Twitter Password:</td>
+      <td class="widgets_value"><%= f.password_field(:twitter_password)%></td>
+      </tr>
+    </table>
+    <div class="layout_update_button">
+      <%= f.submit "Save Changes" %>
+    </div>
   <% end %>
-
+</div>
