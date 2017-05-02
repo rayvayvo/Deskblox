@@ -64,7 +64,7 @@ def load_stocks
 
     stock_stream.each do |s|
     ss = s.dump.split("n\\").join.split("\\").join.split("\"").join.split(",")
-    final_stream += "#{ss[0].capitalize} ask: #{ss[1]}, buy: #{ss[2]}, varied: #{ss[3]}% • "
+    final_stream += "#{ss[0]} | ask: #{ss[1]} | buy: #{ss[2]} | varied: #{ss[3]}% | • "
     end
       return final_stream
 end
