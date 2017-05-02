@@ -51,7 +51,7 @@ Widget.create(
   size: "large"
 )
 
-#TwitterHelper.parse_timeline()
+TwitterHelper.parse_timeline()
 
 
 Setting.create(
