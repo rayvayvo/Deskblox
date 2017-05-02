@@ -1,7 +1,9 @@
+<% youtube_id = UserWidgetSetting.where("user_id == ?", current_user.id).last.youtube_url %>
+
 <div class="auto-resizable-iframe centered">
   <div>
     <iframe
-    src="http://www.youtube.com/embed/oCxJhNLCdAU?
+    src="http://www.youtube.com/embed/<%= youtube_id %>?
      &showinfo=0
      &autoplay=1">
      </iframe>

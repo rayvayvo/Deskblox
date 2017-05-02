@@ -18,7 +18,8 @@
 
 <% if !UserWidgetSetting.where("user_id == ?", current_user.id).first
     UserWidgetSetting.create(
-      user_id: current_user.id
+      user_id: current_user.id,
+      youtube_url: '_OBlgSz8sSM'
     ) end %>
 
 
