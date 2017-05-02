@@ -1,4 +1,4 @@
-<% NewsHelper.getHeadlines('local', 5) %>
+<% NewsHelper.getHeadlines('local', 10) %>
 <% news_blob = Widget.where(["data_source = ?", 'local']).last %>
 <div class="local_news_marquee news"><%= news_blob.data_string %></div>
 
