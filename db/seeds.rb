@@ -32,11 +32,19 @@ Widget.create(
   name: "espn_news",
   size: "medium"
 )
+
 NewsHelper.getHeadlines('local', 5)
 NewsHelper.getHeadlines('topstory', 5)
 NewsHelper.getHeadlines('onion', 5)
 
-# TwitterHelper.parse_timeline()
+Widget.create(
+  data_url: "youtube.com",
+  data_source: 'youtube',
+  name: "youtube",
+  size: "large"
+)
+
+TwitterHelper.parse_timeline()
 
 
 Setting.create(

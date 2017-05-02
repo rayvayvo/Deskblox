@@ -10,9 +10,9 @@ before_action :set_widget_setting
 
   def update
       @widget_setting.update(
-        youtube_url: "#{params[:widget_setting]['youtube_url']}",
-        twitter_username: "#{params[:widget_setting]['twitter_username']}",
-        twitter_password: "#{params[:widget_setting]['twitter_password']}",
+        youtube_url: "#{params[:user_widget_setting]['youtube_url']}",
+        twitter_username: "#{params[:user_widget_setting]['twitter_username']}",
+        twitter_password: "#{params[:user_widget_setting]['twitter_password']}",
       )
         redirect_to "/blocks"
   end
