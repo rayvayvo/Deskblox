@@ -53,7 +53,7 @@ end %>
 <div>
     Layout:
             <%= f.select(:layout_id) do %>
-              <%= options_for_select([["Layout 1", 1],["Layout 2", 2],["Layout 3", 3]]) %>
+              <%= options_for_select(([["Layout 1", 1],["Layout 2", 2],["Layout 3", 3]]), @setting.layout_id) %>
             <% end %>
   </div><br><br>
 
