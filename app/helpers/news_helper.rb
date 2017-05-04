@@ -8,19 +8,26 @@ module NewsHelper
       else ''
     end
 
-
-    feed = Feedjira::Feed.fetch_and_parse feed_url
-    all_items = feed.entries[0,number_articles]
-    all_items.each do | story |
-      storyfeed = storyfeed + ' • ' + story.title
+    begin
+      feed = Feedjira::Feed.fetch_and_parse feed_url
+      all_items = feed.entries[0,number_articles]
+      all_items.each do | story |
+        storyfeed = storyfeed + ' • ' + story.title
+      end
+      if not storyfeed == ""
+        Widget.create(
+          data_url: feed_url,
+          data_source: feed_type,
+          data_string: storyfeed,
+          size: "medium",
+          name: "#{feed_type}_news"
+          )
+      else
+        puts "Empty feed! - #{feed_type}"
+      end
+    rescue
+      puts "404! - #{feed_type}"
     end
-    Widget.create(
-      data_url: feed_url,
-      data_source: feed_type,
-      data_string: storyfeed,
-      size: "medium",
-      name: "#{feed_type}_news"
-      )
 
   end
 
